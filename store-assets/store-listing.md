@@ -56,10 +56,10 @@ Productivité (ou Outils)
 Français
 
 ## Site web (optionnel)
-(votre URL GitHub ou page web)
+https://github.com/fibonacci5252-a11y/quick-clean-extension
 
 ## Email de support
 fibonacci5252@gmail.com
 
 ## URL Politique de confidentialité
-(héberger privacy-policy.html et mettre l'URL ici)
+https://fibonacci5252-a11y.github.io/quick-clean-extension/store-assets/privacy-policy.html
