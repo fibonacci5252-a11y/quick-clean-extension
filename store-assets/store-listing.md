@@ -1,59 +1,59 @@
 # Quick Clean — Chrome Web Store Listing
 
-## Nom
+## Name
 Quick Clean
 
-## Résumé court (132 caractères max)
-Supprimez vos données de navigation en un clic — historique, cookies, cache et plus. Rapide, privé, configurable.
+## Short description (132 characters max)
+Clear your browsing data in one click — history, cookies, cache and more. Fast, private, configurable.
 
-## Description détaillée
+## Detailed description
 
-🧹 Quick Clean — Nettoyez votre navigateur en un clic
+🧹 Quick Clean — Clean your browser in one click
 
-Reprenez le contrôle de votre vie privée. Quick Clean supprime vos données de navigation instantanément, sans quitter votre onglet.
-
-━━━━━━━━━━━━━━━━━━━━━━
-
-✅ CE QUE QUICK CLEAN FAIT :
-
-• Historique de navigation — Effacez vos traces en un instant
-• Cookies — Supprimez les cookies avec une liste blanche pour protéger vos sites favoris
-• Cache — Libérez de l'espace et forcez le rechargement des pages
-• Données de formulaires — Supprimez les saisies automatiques
-• Téléchargements — Nettoyez l'historique de téléchargement
-• Mots de passe enregistrés — Supprimez-les si nécessaire
-• Stockage local — Effacez localStorage et IndexedDB
-• Onglets — Fermez tous les onglets en un clic
+Take back control of your privacy. Quick Clean wipes your browsing data instantly, without leaving your tab.
 
 ━━━━━━━━━━━━━━━━━━━━━━
 
-⚡ FONCTIONNALITÉS CLÉS :
+✅ WHAT QUICK CLEAN DOES:
 
-🕐 Plage de temps flexible — Choisissez entre 1 heure, 24 heures, 7 jours ou tout l'historique
-🛡️ Liste blanche — Protégez les cookies de vos sites importants (banque, email...)
-⌨️ Raccourci clavier — Nettoyez avec Ctrl+Shift+E sans ouvrir le popup
-🔔 Notifications — Confirmation visuelle après chaque nettoyage
-🚀 Nettoyage au démarrage — Option pour nettoyer automatiquement à l'ouverture de Chrome
-🎨 Interface élégante — Design sombre et moderne, rapide et intuitif
-
-━━━━━━━━━━━━━━━━━━━━━━
-
-🔒 RESPECT DE LA VIE PRIVÉE :
-
-• Aucune donnée collectée ni transmise
-• Aucun tracking ni analytics
-• Fonctionne 100% en local
-• Code source transparent
+• Browsing history — Erase your tracks in an instant
+• Cookies — Delete cookies with a whitelist to protect your favorite sites
+• Cache — Free up space and force pages to reload fresh
+• Form data — Remove autofill entries
+• Downloads — Clear your download history
+• Saved passwords — Delete them when needed
+• Local storage — Wipe localStorage and IndexedDB
+• Tabs — Close all open tabs in one click
 
 ━━━━━━━━━━━━━━━━━━━━━━
 
-Quick Clean est gratuit, sans pub et respecte votre vie privée. Installez-le et nettoyez en un clic !
+⚡ KEY FEATURES:
 
-## Catégorie
-Productivité (ou Outils)
+🕐 Flexible time range — Choose between 1 hour, 24 hours, 7 days or all time
+🛡️ Whitelist — Protect cookies from your important sites (banking, email...)
+⌨️ Keyboard shortcut — Clean with Ctrl+Shift+E without opening the popup
+🔔 Notifications — Visual confirmation after every cleanup
+🚀 Clean on startup — Option to automatically clean when Chrome launches
+🎨 Sleek interface — Dark modern design, fast and intuitive
 
-## Langue
-Français
+━━━━━━━━━━━━━━━━━━━━━━
+
+🔒 PRIVACY FIRST:
+
+• No data collected or transmitted
+• No tracking or analytics
+• Works 100% locally
+• Transparent source code
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+Quick Clean is free, ad-free and respects your privacy. Install it and clean in one click!
+
+## Category
+Productivity
+
+## Language
+English
 
 ## Site web (optionnel)
 https://github.com/fibonacci5252-a11y/quick-clean-extension
