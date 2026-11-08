@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quick Clean — Paramètres</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="page-header">
+      <div class="logo">
+        <!-- Icône brosse FlowPay -->
+        <svg class="logo-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="30" height="30" rx="8" fill="#111111"/>
+          <rect x="12" y="2" width="6" height="11" rx="3" fill="#1FE783"/>
+          <rect x="9.5" y="12" width="11" height="3" rx="1.5" fill="#18c46e"/>
+          <rect x="4.5" y="14.5" width="21" height="9" rx="3" fill="#E0EAF8"/>
+          <rect x="6" y="15.5" width="18" height="3" rx="1" fill="#ffffff" opacity="0.6"/>
+          <rect x="7" y="23" width="3" height="4.5" rx="1.5" fill="#A0B4CC"/>
+          <rect x="12" y="23" width="3" height="5.5" rx="1.5" fill="#A0B4CC"/>
+          <rect x="17" y="23" width="3" height="5" rx="1.5" fill="#A0B4CC"/>
+          <rect x="22" y="23" width="3" height="4.5" rx="1.5" fill="#A0B4CC"/>
+          <circle cx="26.5" cy="5.5" r="1.4" fill="#1FE783"/>
+          <line x1="26.5" y1="2.5" x2="26.5" y2="8.5" stroke="#1FE783" stroke-width="1.1" stroke-linecap="round"/>
+          <line x1="23.5" y1="5.5" x2="29.5" y2="5.5" stroke="#1FE783" stroke-width="1.1" stroke-linecap="round"/>
+          <circle cx="3" cy="10" r="1" fill="#1FE783" opacity="0.6"/>
+        </svg>
+        <span class="logo-name">Quick<span>Clean</span></span>
+      </div>
+      <p class="subtitle">Paramètres avancés</p>
+    </header>
+
+    <!-- Whitelist -->
+    <section class="card">
+      <h2>Domaines protégés (Whitelist)</h2>
+      <p class="desc">Ces domaines ne seront jamais touchés lors du nettoyage des cookies.</p>
+
+      <div class="add-domain">
+        <input type="text" id="domainInput" placeholder="exemple.com" autocomplete="off" spellcheck="false" />
+        <button id="btnAdd">Ajouter</button>
+      </div>
+
+      <ul class="domain-list" id="domainList"></ul>
+      <p class="empty-msg" id="emptyMsg">Aucun domaine protégé.</p>
+    </section>
+
+    <!-- Comportement -->
+    <section class="card">
+      <h2>Comportement</h2>
+
+      <div class="option-row">
+        <div class="option-text">
+          <strong>Notifications</strong>
+          <p>Afficher une notification après chaque nettoyage.</p>
+        </div>
+        <label class="toggle-wrap">
+          <input type="checkbox" id="notifications" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="option-row">
+        <div class="option-text">
+          <strong>Nettoyage au démarrage</strong>
+          <p>Nettoyer automatiquement au lancement de Chrome.</p>
+        </div>
+        <label class="toggle-wrap">
+          <input type="checkbox" id="cleanOnStartup" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Raccourci -->
+    <section class="card">
+      <h2>Raccourci clavier</h2>
+      <p class="shortcut-desc">
+        Le raccourci par défaut est <kbd>Ctrl+Shift+E</kbd>. Pour le modifier, rendez-vous dans les paramètres Chrome :
+      </p>
+      <a class="link-btn" id="btnShortcut">
+        Gérer les raccourcis d'extensions
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- Save -->
+    <div class="save-row">
+      <button class="btn-save" id="btnSave">Enregistrer</button>
+      <span class="save-feedback" id="saveFeedback"></span>
+    </div>
+
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

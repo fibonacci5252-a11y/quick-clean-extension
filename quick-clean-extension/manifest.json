@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Clean",
+  "version": "1.0.0",
+  "description": "Supprimez vos données de navigation en un clic — historique, cookies, cache et plus.",
+  "permissions": [
+    "browsingData",
+    "history",
+    "tabs",
+    "downloads",
+    "cookies",
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "icons": {
+    "16":  "icons/icon16.png",
+    "48":  "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16":  "icons/icon16.png",
+      "48":  "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "trigger-clean": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      },
+      "description": "Nettoyer les données de navigation"
+    }
+  }
+}
