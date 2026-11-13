@@ -3,33 +3,45 @@
 // ============================================================
 
 const DEFAULT_SETTINGS = {
-  notifications:    true,
-  cleanOnStartup:   false,
-  whitelist:        []
+  notifications:  true,
+  cleanOnStartup: false,
+  whitelist:      [],
+  theme:          "auto"
 };
+
+const DEFAULT_STATS = { cleanups: 0, cookies: 0, history: 0 };
 
 let whitelist = [];
 
-// --- Éléments ---
-const domainInput  = document.getElementById("domainInput");
-const btnAdd       = document.getElementById("btnAdd");
-const domainList   = document.getElementById("domainList");
-const emptyMsg     = document.getElementById("emptyMsg");
-const btnSave      = document.getElementById("btnSave");
-const saveFeedback = document.getElementById("saveFeedback");
-const btnShortcut  = document.getElementById("btnShortcut");
+const domainInput   = document.getElementById("domainInput");
+const btnAdd        = document.getElementById("btnAdd");
+const domainList    = document.getElementById("domainList");
+const emptyMsg      = document.getElementById("emptyMsg");
+const btnSave       = document.getElementById("btnSave");
+const saveFeedback  = document.getElementById("saveFeedback");
+const btnShortcut   = document.getElementById("btnShortcut");
+const themeSelect   = document.getElementById("themeSelect");
+const btnResetStats = document.getElementById("btnResetStats");
 
-// --- Charge les paramètres ---
+function renderStats(stats) {
+  const s = Object.assign({}, DEFAULT_STATS, stats);
+  document.getElementById("statCleanups").textContent = s.cleanups.toLocaleString();
+  document.getElementById("statCookies").textContent  = s.cookies.toLocaleString();
+  document.getElementById("statHistory").textContent  = s.history.toLocaleString();
+}
+
 function loadSettings() {
   chrome.storage.sync.get(DEFAULT_SETTINGS, (settings) => {
     document.getElementById("notifications").checked  = settings.notifications;
     document.getElementById("cleanOnStartup").checked = settings.cleanOnStartup;
+    themeSelect.value = settings.theme;
     whitelist = Array.isArray(settings.whitelist) ? settings.whitelist : [];
     renderWhitelist();
   });
+
+  chrome.storage.local.get({ stats: DEFAULT_STATS }, (data) => renderStats(data.stats));
 }
 
-// --- Affiche la whitelist ---
 function renderWhitelist() {
   domainList.innerHTML = "";
   emptyMsg.style.display = whitelist.length === 0 ? "block" : "none";
@@ -40,7 +52,7 @@ function renderWhitelist() {
 
     const btn = document.createElement("button");
     btn.textContent = "×";
-    btn.title = "Supprimer";
+    btn.title = qcT("remove");
     btn.addEventListener("click", () => {
       whitelist.splice(i, 1);
       renderWhitelist();
@@ -51,7 +63,6 @@ function renderWhitelist() {
   });
 }
 
-// --- Ajoute un domaine ---
 function addDomain() {
   const raw    = domainInput.value.trim().toLowerCase();
   const domain = raw.replace(/^https?:\/\//, "").replace(/\/.*$/, "").replace(/^www\./, "");
@@ -71,7 +82,6 @@ function addDomain() {
   domainInput.focus();
 }
 
-// --- Sauvegarde ---
 function saveSettings() {
   const settings = {
     notifications:  document.getElementById("notifications").checked,
@@ -80,12 +90,11 @@ function saveSettings() {
   };
 
   chrome.storage.sync.set(settings, () => {
-    saveFeedback.textContent = "✓ Enregistré";
+    saveFeedback.textContent = "✓ " + qcT("saved");
     setTimeout(() => { saveFeedback.textContent = ""; }, 2500);
   });
 }
 
-// --- Listeners ---
 btnAdd.addEventListener("click", addDomain);
 domainInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") addDomain();
@@ -93,9 +102,18 @@ domainInput.addEventListener("keydown", (e) => {
 
 btnSave.addEventListener("click", saveSettings);
 
+themeSelect.addEventListener("change", () => QCTheme.set(themeSelect.value));
+
+btnResetStats.addEventListener("click", () => {
+  chrome.storage.local.set({ stats: DEFAULT_STATS });
+});
+
 btnShortcut.addEventListener("click", () => {
   chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
 });
 
-// --- Init ---
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area === "local" && changes.stats) renderStats(changes.stats.newValue);
+});
+
 loadSettings();

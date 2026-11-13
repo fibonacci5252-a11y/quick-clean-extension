@@ -1,44 +1,42 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Quick Clean — Paramètres</title>
+  <title data-i18n="optionsTitle">Quick Clean — Settings</title>
+  <script src="../shared/theme.js"></script>
   <link rel="stylesheet" href="options.css" />
 </head>
 <body>
   <div class="page">
 
-    <!-- Header -->
     <header class="page-header">
       <div class="logo">
         <img class="logo-icon" src="../icons/icon48.png" width="30" height="30" alt="" />
         <span class="logo-name">Quick<span>Clean</span></span>
       </div>
-      <p class="subtitle">Paramètres avancés</p>
+      <p class="subtitle" data-i18n="advancedSettings">Advanced settings</p>
     </header>
 
-    <!-- Whitelist -->
     <section class="card">
-      <h2>Domaines protégés (Whitelist)</h2>
-      <p class="desc">Ces domaines ne seront jamais touchés lors du nettoyage des cookies.</p>
+      <h2 data-i18n="whitelistTitle">Protected domains (whitelist)</h2>
+      <p class="desc" data-i18n="whitelistDesc">These domains are never touched when clearing cookies.</p>
 
       <div class="add-domain">
-        <input type="text" id="domainInput" placeholder="exemple.com" autocomplete="off" spellcheck="false" />
-        <button id="btnAdd">Ajouter</button>
+        <input type="text" id="domainInput" data-i18n-placeholder="domainPlaceholder" placeholder="example.com" autocomplete="off" spellcheck="false" />
+        <button id="btnAdd" data-i18n="btnAdd">Add</button>
       </div>
 
       <ul class="domain-list" id="domainList"></ul>
-      <p class="empty-msg" id="emptyMsg">Aucun domaine protégé.</p>
+      <p class="empty-msg" id="emptyMsg" data-i18n="emptyWhitelist">No protected domains.</p>
     </section>
 
-    <!-- Comportement -->
     <section class="card">
-      <h2>Comportement</h2>
+      <h2 data-i18n="behaviorTitle">Behavior</h2>
 
       <div class="option-row">
         <div class="option-text">
-          <strong>Notifications</strong>
-          <p>Afficher une notification après chaque nettoyage.</p>
+          <strong data-i18n="notifOptTitle">Notifications</strong>
+          <p data-i18n="notifOptDesc">Show a notification after each cleanup.</p>
         </div>
         <label class="toggle-wrap">
           <input type="checkbox" id="notifications" />
@@ -48,8 +46,8 @@
 
       <div class="option-row">
         <div class="option-text">
-          <strong>Nettoyage au démarrage</strong>
-          <p>Nettoyer automatiquement au lancement de Chrome.</p>
+          <strong data-i18n="startupTitle">Clean on startup</strong>
+          <p data-i18n="startupDesc">Clean automatically when Chrome launches.</p>
         </div>
         <label class="toggle-wrap">
           <input type="checkbox" id="cleanOnStartup" />
@@ -58,27 +56,52 @@
       </div>
     </section>
 
-    <!-- Raccourci -->
     <section class="card">
-      <h2>Raccourci clavier</h2>
+      <h2 data-i18n="appearanceTitle">Appearance</h2>
+      <div class="option-row">
+        <div class="option-text">
+          <strong data-i18n="themeLabel">Theme</strong>
+        </div>
+        <select id="themeSelect" class="select">
+          <option value="auto" data-i18n="themeAuto">Auto (system)</option>
+          <option value="light" data-i18n="themeLight">Light</option>
+          <option value="dark" data-i18n="themeDark">Dark</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="statsTitle">Statistics</h2>
+      <p class="desc" data-i18n="statsDesc">Totals since you started using Quick Clean. They are stored only on this device.</p>
+      <div class="stats-grid">
+        <div class="stat"><strong id="statCleanups">0</strong><span data-i18n="statsCleanups">Cleanups</span></div>
+        <div class="stat"><strong id="statCookies">0</strong><span data-i18n="statsCookies">Cookies</span></div>
+        <div class="stat"><strong id="statHistory">0</strong><span data-i18n="statsHistory">History</span></div>
+      </div>
+      <button class="btn-ghost" id="btnResetStats" data-i18n="statsReset">Reset statistics</button>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="shortcutTitle">Keyboard shortcut</h2>
       <p class="shortcut-desc">
-        Le raccourci par défaut est <kbd>Ctrl+Shift+E</kbd>. Pour le modifier, rendez-vous dans les paramètres Chrome :
+        <span data-i18n="shortcutDefault">Default shortcut:</span> <kbd>Ctrl+Shift+E</kbd><br />
+        <span data-i18n="shortcutChange">To change it, open Chrome's extension shortcut settings.</span>
       </p>
       <a class="link-btn" id="btnShortcut">
-        Gérer les raccourcis d'extensions
+        <span data-i18n="shortcutManage">Manage extension shortcuts</span>
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
         </svg>
       </a>
     </section>
 
-    <!-- Save -->
     <div class="save-row">
-      <button class="btn-save" id="btnSave">Enregistrer</button>
+      <button class="btn-save" id="btnSave" data-i18n="btnSave">Save</button>
       <span class="save-feedback" id="saveFeedback"></span>
     </div>
 
   </div>
+  <script src="../shared/i18n.js"></script>
   <script src="options.js"></script>
 </body>
 </html>

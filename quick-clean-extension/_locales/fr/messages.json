@@ -1,0 +1,103 @@
+{
+  "extName": { "message": "Quick Clean" },
+  "extDescription": { "message": "Supprimez vos données de navigation en un clic — historique, cookies, cache et plus." },
+  "cmdClean": { "message": "Nettoyer les données de navigation" },
+
+  "settingsTitle": { "message": "Paramètres" },
+  "themeToggle": { "message": "Changer de thème" },
+  "period": { "message": "Période" },
+  "range1h": { "message": "1 heure" },
+  "range24h": { "message": "24 h" },
+  "range7d": { "message": "7 jours" },
+  "rangeAll": { "message": "Tout" },
+  "dataToClear": { "message": "Données à effacer" },
+  "optHistory": { "message": "Historique" },
+  "optCookies": { "message": "Cookies" },
+  "optCache": { "message": "Cache" },
+  "optDownloads": { "message": "Téléchargements" },
+  "optForms": { "message": "Formulaires" },
+  "optPasswords": { "message": "Mots de passe" },
+  "optLocalStorage": { "message": "Stockage local" },
+  "optCloseTabs": { "message": "Fermer les onglets" },
+  "btnClean": { "message": "Nettoyer maintenant" },
+  "btnCleaning": { "message": "Nettoyage en cours…" },
+  "shortcutLabel": { "message": "Raccourci :" },
+
+  "thisSite": { "message": "Ce site" },
+  "btnCleanSite": { "message": "Nettoyer le site" },
+  "siteUnavailable": { "message": "Ouvrez un site web pour le nettoyer seul." },
+  "siteDone": {
+    "message": "$HOST$ nettoyé : $COOKIES$ cookies, $HISTORY$ pages d'historique",
+    "placeholders": {
+      "host": { "content": "$1" },
+      "cookies": { "content": "$2" },
+      "history": { "content": "$3" }
+    }
+  },
+
+  "statusRemoved": {
+    "message": "Supprimé : $ITEMS$",
+    "placeholders": { "items": { "content": "$1" } }
+  },
+  "statusNothing": { "message": "Rien à nettoyer." },
+  "statusError": { "message": "Erreur lors du nettoyage." },
+  "lastNow": { "message": "Dernier nettoyage : à l'instant" },
+  "lastMinutes": {
+    "message": "Dernier nettoyage : il y a $N$ min",
+    "placeholders": { "n": { "content": "$1" } }
+  },
+  "lastHours": {
+    "message": "Dernier nettoyage : il y a $N$ h",
+    "placeholders": { "n": { "content": "$1" } }
+  },
+  "lastDays": {
+    "message": "Dernier nettoyage : il y a $N$ j",
+    "placeholders": { "n": { "content": "$1" } }
+  },
+
+  "rHistory": { "message": "historique" },
+  "rCache": { "message": "cache" },
+  "rDownloads": { "message": "téléchargements" },
+  "rForms": { "message": "formulaires" },
+  "rPasswords": { "message": "mots de passe" },
+  "rLocalStorage": { "message": "stockage local" },
+  "rCookies": { "message": "cookies" },
+  "rTabs": { "message": "onglets" },
+  "notifTitle": { "message": "Quick Clean ✓" },
+  "notifMessage": {
+    "message": "Nettoyé : $ITEMS$.",
+    "placeholders": { "items": { "content": "$1" } }
+  },
+
+  "statsCleanups": { "message": "Nettoyages" },
+  "statsCookies": { "message": "Cookies" },
+  "statsHistory": { "message": "Historique" },
+
+  "optionsTitle": { "message": "Quick Clean — Paramètres" },
+  "advancedSettings": { "message": "Paramètres avancés" },
+  "whitelistTitle": { "message": "Domaines protégés (liste blanche)" },
+  "whitelistDesc": { "message": "Ces domaines ne seront jamais touchés lors du nettoyage des cookies." },
+  "domainPlaceholder": { "message": "exemple.com" },
+  "btnAdd": { "message": "Ajouter" },
+  "emptyWhitelist": { "message": "Aucun domaine protégé." },
+  "remove": { "message": "Supprimer" },
+  "behaviorTitle": { "message": "Comportement" },
+  "notifOptTitle": { "message": "Notifications" },
+  "notifOptDesc": { "message": "Afficher une notification après chaque nettoyage." },
+  "startupTitle": { "message": "Nettoyage au démarrage" },
+  "startupDesc": { "message": "Nettoyer automatiquement au lancement de Chrome." },
+  "appearanceTitle": { "message": "Apparence" },
+  "themeLabel": { "message": "Thème" },
+  "themeAuto": { "message": "Auto (système)" },
+  "themeLight": { "message": "Clair" },
+  "themeDark": { "message": "Sombre" },
+  "statsTitle": { "message": "Statistiques" },
+  "statsDesc": { "message": "Totaux depuis le début de l'utilisation de Quick Clean. Ils sont stockés uniquement sur cet appareil." },
+  "statsReset": { "message": "Réinitialiser les statistiques" },
+  "shortcutTitle": { "message": "Raccourci clavier" },
+  "shortcutDefault": { "message": "Raccourci par défaut :" },
+  "shortcutChange": { "message": "Pour le modifier, ouvrez les paramètres de raccourcis d'extensions de Chrome." },
+  "shortcutManage": { "message": "Gérer les raccourcis d'extensions" },
+  "btnSave": { "message": "Enregistrer" },
+  "saved": { "message": "Enregistré" }
+}

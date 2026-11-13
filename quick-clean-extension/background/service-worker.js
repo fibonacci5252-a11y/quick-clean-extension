@@ -1,34 +1,33 @@
 // ============================================================
 // Quick Clean — Service Worker
-// Gère le raccourci clavier et le nettoyage en arrière-plan
+// Keyboard shortcut, startup cleanup and background cleaning
 // ============================================================
 
-// --- Paramètres par défaut ---
+const t = (key, subs) => chrome.i18n.getMessage(key, subs);
+
 const DEFAULT_SETTINGS = {
-  clearHistory:   true,
-  clearCookies:   true,
-  clearCache:     true,
-  clearDownloads: false,
-  clearFormData:  true,
-  clearPasswords: false,
+  clearHistory:      true,
+  clearCookies:      true,
+  clearCache:        true,
+  clearDownloads:    false,
+  clearFormData:     true,
+  clearPasswords:    false,
   clearLocalStorage: false,
-  timeRange:      "hour",   // hour | day | week | all
-  closeTabs:      false,
-  whitelist:      [],       // domaines à protéger
-  notifications:  true,
-  cleanOnStartup: false
+  timeRange:         "hour",   // hour | day | week | all
+  closeTabs:         false,
+  whitelist:         [],
+  notifications:     true,
+  cleanOnStartup:    false
 };
 
-// --- Récupère les paramètres depuis le storage ---
-async function getSettings() {
+const DEFAULT_STATS = { cleanups: 0, cookies: 0, history: 0 };
+
+function getSettings() {
   return new Promise((resolve) => {
-    chrome.storage.sync.get(DEFAULT_SETTINGS, (settings) => {
-      resolve(settings);
-    });
+    chrome.storage.sync.get(DEFAULT_SETTINGS, resolve);
   });
 }
 
-// --- Calcule le timestamp "depuis" selon la plage choisie ---
 function getSinceTimestamp(timeRange) {
   const now = Date.now();
   switch (timeRange) {
@@ -40,99 +39,139 @@ function getSinceTimestamp(timeRange) {
   }
 }
 
-// --- Supprime les cookies en respectant la whitelist ---
+async function addStats(delta) {
+  const { stats } = await chrome.storage.local.get({ stats: DEFAULT_STATS });
+  await chrome.storage.local.set({
+    stats: {
+      cleanups: stats.cleanups + 1,
+      cookies:  stats.cookies + (delta.cookies || 0),
+      history:  stats.history + (delta.history || 0)
+    }
+  });
+}
+
+async function countHistory(since) {
+  const items = await chrome.history.search({
+    text: "",
+    startTime: since,
+    maxResults: 1000000
+  });
+  return items.length;
+}
+
+function removeCookie(cookie) {
+  const protocol = cookie.secure ? "https" : "http";
+  const domain = cookie.domain.startsWith(".") ? cookie.domain.slice(1) : cookie.domain;
+  const url = `${protocol}://${domain}${cookie.path}`;
+  return new Promise((resolve) => chrome.cookies.remove({ url, name: cookie.name }, resolve));
+}
+
 async function clearCookiesWithWhitelist(whitelist) {
-  return new Promise((resolve) => {
-    chrome.cookies.getAll({}, async (cookies) => {
-      const toDelete = cookies.filter(cookie => {
-        const domain = cookie.domain.replace(/^\./, "");
-        return !whitelist.some(w => domain === w || domain.endsWith("." + w));
-      });
-
-      for (const cookie of toDelete) {
-        const protocol = cookie.secure ? "https" : "http";
-        const cookieDomain = cookie.domain.startsWith(".")
-          ? cookie.domain.slice(1)
-          : cookie.domain;
-        const url = `${protocol}://${cookieDomain}${cookie.path}`;
-        await new Promise(r => chrome.cookies.remove({ url, name: cookie.name }, r));
-      }
-      resolve(toDelete.length);
-    });
+  const cookies = await chrome.cookies.getAll({});
+  const toDelete = cookies.filter((cookie) => {
+    const domain = cookie.domain.replace(/^\./, "");
+    return !whitelist.some((w) => domain === w || domain.endsWith("." + w));
   });
+  for (const cookie of toDelete) {
+    await removeCookie(cookie);
+  }
+  return toDelete.length;
 }
 
-// --- Ferme tous les onglets sauf le nouvel onglet actif ---
 async function closeAllTabs() {
-  return new Promise((resolve) => {
-    chrome.tabs.query({}, (tabs) => {
-      const toClose = tabs.filter(t => !t.active);
-      const ids = toClose.map(t => t.id);
-      if (ids.length > 0) {
-        chrome.tabs.remove(ids, resolve);
-      } else {
-        resolve();
-      }
-    });
-  });
+  const tabs = await chrome.tabs.query({});
+  const ids = tabs.filter((tab) => !tab.active).map((tab) => tab.id);
+  if (ids.length > 0) await chrome.tabs.remove(ids);
 }
 
-// --- Fonction principale de nettoyage ---
 async function runCleanup(source = "manual") {
   const settings = await getSettings();
-  const since    = getSinceTimestamp(settings.timeRange);
+  const since = getSinceTimestamp(settings.timeRange);
   const dataTypes = {};
-  let   report   = [];
+  const report = [];
+  const counts = { cookies: 0, history: 0 };
 
   if (settings.clearHistory)      dataTypes.history      = true;
   if (settings.clearCache)        dataTypes.cache        = true;
   if (settings.clearDownloads)    dataTypes.downloads    = true;
   if (settings.clearFormData)     dataTypes.formData     = true;
   if (settings.clearPasswords)    dataTypes.passwords    = true;
-  if (settings.clearLocalStorage) dataTypes.localStorage = true;
-  if (settings.clearLocalStorage) dataTypes.indexedDB    = true;
-
-  // Nettoyage browsingData standard
-  await new Promise((resolve) => {
-    chrome.browsingData.remove({ since }, dataTypes, resolve);
-  });
-
-  if (settings.clearHistory)      report.push("historique");
-  if (settings.clearCache)        report.push("cache");
-  if (settings.clearDownloads)    report.push("téléchargements");
-  if (settings.clearFormData)     report.push("formulaires");
-  if (settings.clearPasswords)    report.push("mots de passe");
-  if (settings.clearLocalStorage) report.push("stockage local");
-
-  // Cookies avec whitelist
-  if (settings.clearCookies) {
-    const count = await clearCookiesWithWhitelist(settings.whitelist);
-    report.push(`cookies (${count})`);
+  if (settings.clearLocalStorage) {
+    dataTypes.localStorage = true;
+    dataTypes.indexedDB    = true;
   }
 
-  // Fermer les onglets
+  if (settings.clearHistory) counts.history = await countHistory(since);
+
+  await chrome.browsingData.remove({ since }, dataTypes);
+
+  if (settings.clearHistory)      report.push(`${t("rHistory")} (${counts.history})`);
+  if (settings.clearCache)        report.push(t("rCache"));
+  if (settings.clearDownloads)    report.push(t("rDownloads"));
+  if (settings.clearFormData)     report.push(t("rForms"));
+  if (settings.clearPasswords)    report.push(t("rPasswords"));
+  if (settings.clearLocalStorage) report.push(t("rLocalStorage"));
+
+  if (settings.clearCookies) {
+    counts.cookies = await clearCookiesWithWhitelist(settings.whitelist);
+    report.push(`${t("rCookies")} (${counts.cookies})`);
+  }
+
   if (settings.closeTabs) {
     await closeAllTabs();
-    report.push("onglets");
+    report.push(t("rTabs"));
   }
 
-  // Notification
   if (settings.notifications && report.length > 0) {
     chrome.notifications.create("cleanup-done", {
       type:    "basic",
       iconUrl: "icons/icon48.png",
-      title:   "Quick Clean ✓",
-      message: `Nettoyé : ${report.join(", ")}.`
+      title:   t("notifTitle"),
+      message: t("notifMessage", [report.join(", ")])
     });
   }
 
-  // Met à jour la date du dernier nettoyage
-  chrome.storage.local.set({ lastClean: Date.now(), lastReport: report });
+  if (report.length > 0) await addStats(counts);
+  await chrome.storage.local.set({ lastClean: Date.now(), lastReport: report });
 
-  return { success: true, report };
+  return { success: true, report, counts };
 }
 
-// --- Nettoyage automatique au démarrage de Chrome ---
+async function cleanSite(url) {
+  let parsed;
+  try {
+    parsed = new URL(url);
+  } catch (e) {
+    return { success: false };
+  }
+  if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+    return { success: false };
+  }
+  const host = parsed.hostname;
+
+  const cookies = await chrome.cookies.getAll({ url: parsed.href });
+  for (const cookie of cookies) {
+    await removeCookie(cookie);
+  }
+
+  await chrome.browsingData.remove(
+    { origins: [parsed.origin] },
+    { localStorage: true, indexedDB: true, cacheStorage: true }
+  );
+
+  const entries = await chrome.history.search({ text: host, startTime: 0, maxResults: 100000 });
+  const siteEntries = entries.filter((entry) => {
+    try { return new URL(entry.url).hostname === host; } catch (e) { return false; }
+  });
+  await Promise.all(siteEntries.map((entry) => chrome.history.deleteUrl({ url: entry.url })));
+
+  const counts = { cookies: cookies.length, history: siteEntries.length };
+  await addStats(counts);
+  await chrome.storage.local.set({ lastClean: Date.now() });
+
+  return { success: true, host, counts };
+}
+
 chrome.runtime.onStartup.addListener(async () => {
   const settings = await getSettings();
   if (settings.cleanOnStartup) {
@@ -140,17 +179,19 @@ chrome.runtime.onStartup.addListener(async () => {
   }
 });
 
-// --- Écoute le raccourci clavier ---
 chrome.commands.onCommand.addListener((command) => {
   if (command === "trigger-clean") {
     runCleanup("shortcut");
   }
 });
 
-// --- Écoute les messages du popup ---
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message.action === "runCleanup") {
-    runCleanup("popup").then(sendResponse);
-    return true; // réponse asynchrone
+    runCleanup("popup").then(sendResponse).catch(() => sendResponse({ success: false }));
+    return true;
+  }
+  if (message.action === "cleanSite") {
+    cleanSite(message.url).then(sendResponse).catch(() => sendResponse({ success: false }));
+    return true;
   }
 });

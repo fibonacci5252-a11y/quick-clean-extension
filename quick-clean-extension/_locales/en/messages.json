@@ -1,0 +1,103 @@
+{
+  "extName": { "message": "Quick Clean" },
+  "extDescription": { "message": "Clear your browsing data in one click — history, cookies, cache and more." },
+  "cmdClean": { "message": "Clean browsing data" },
+
+  "settingsTitle": { "message": "Settings" },
+  "themeToggle": { "message": "Switch theme" },
+  "period": { "message": "Period" },
+  "range1h": { "message": "1 hour" },
+  "range24h": { "message": "24 h" },
+  "range7d": { "message": "7 days" },
+  "rangeAll": { "message": "All" },
+  "dataToClear": { "message": "Data to clear" },
+  "optHistory": { "message": "History" },
+  "optCookies": { "message": "Cookies" },
+  "optCache": { "message": "Cache" },
+  "optDownloads": { "message": "Downloads" },
+  "optForms": { "message": "Forms" },
+  "optPasswords": { "message": "Passwords" },
+  "optLocalStorage": { "message": "Local storage" },
+  "optCloseTabs": { "message": "Close tabs" },
+  "btnClean": { "message": "Clean now" },
+  "btnCleaning": { "message": "Cleaning…" },
+  "shortcutLabel": { "message": "Shortcut:" },
+
+  "thisSite": { "message": "This site" },
+  "btnCleanSite": { "message": "Clean site" },
+  "siteUnavailable": { "message": "Open a website to clean it on its own." },
+  "siteDone": {
+    "message": "Cleaned $HOST$: $COOKIES$ cookies, $HISTORY$ history entries",
+    "placeholders": {
+      "host": { "content": "$1" },
+      "cookies": { "content": "$2" },
+      "history": { "content": "$3" }
+    }
+  },
+
+  "statusRemoved": {
+    "message": "Removed: $ITEMS$",
+    "placeholders": { "items": { "content": "$1" } }
+  },
+  "statusNothing": { "message": "Nothing to clean." },
+  "statusError": { "message": "Cleanup failed." },
+  "lastNow": { "message": "Last cleanup: just now" },
+  "lastMinutes": {
+    "message": "Last cleanup: $N$ min ago",
+    "placeholders": { "n": { "content": "$1" } }
+  },
+  "lastHours": {
+    "message": "Last cleanup: $N$ h ago",
+    "placeholders": { "n": { "content": "$1" } }
+  },
+  "lastDays": {
+    "message": "Last cleanup: $N$ d ago",
+    "placeholders": { "n": { "content": "$1" } }
+  },
+
+  "rHistory": { "message": "history" },
+  "rCache": { "message": "cache" },
+  "rDownloads": { "message": "downloads" },
+  "rForms": { "message": "forms" },
+  "rPasswords": { "message": "passwords" },
+  "rLocalStorage": { "message": "local storage" },
+  "rCookies": { "message": "cookies" },
+  "rTabs": { "message": "tabs" },
+  "notifTitle": { "message": "Quick Clean ✓" },
+  "notifMessage": {
+    "message": "Cleaned: $ITEMS$.",
+    "placeholders": { "items": { "content": "$1" } }
+  },
+
+  "statsCleanups": { "message": "Cleanups" },
+  "statsCookies": { "message": "Cookies" },
+  "statsHistory": { "message": "History" },
+
+  "optionsTitle": { "message": "Quick Clean — Settings" },
+  "advancedSettings": { "message": "Advanced settings" },
+  "whitelistTitle": { "message": "Protected domains (whitelist)" },
+  "whitelistDesc": { "message": "These domains are never touched when clearing cookies." },
+  "domainPlaceholder": { "message": "example.com" },
+  "btnAdd": { "message": "Add" },
+  "emptyWhitelist": { "message": "No protected domains." },
+  "remove": { "message": "Remove" },
+  "behaviorTitle": { "message": "Behavior" },
+  "notifOptTitle": { "message": "Notifications" },
+  "notifOptDesc": { "message": "Show a notification after each cleanup." },
+  "startupTitle": { "message": "Clean on startup" },
+  "startupDesc": { "message": "Clean automatically when Chrome launches." },
+  "appearanceTitle": { "message": "Appearance" },
+  "themeLabel": { "message": "Theme" },
+  "themeAuto": { "message": "Auto (system)" },
+  "themeLight": { "message": "Light" },
+  "themeDark": { "message": "Dark" },
+  "statsTitle": { "message": "Statistics" },
+  "statsDesc": { "message": "Totals since you started using Quick Clean. They are stored only on this device." },
+  "statsReset": { "message": "Reset statistics" },
+  "shortcutTitle": { "message": "Keyboard shortcut" },
+  "shortcutDefault": { "message": "Default shortcut:" },
+  "shortcutChange": { "message": "To change it, open Chrome's extension shortcut settings." },
+  "shortcutManage": { "message": "Manage extension shortcuts" },
+  "btnSave": { "message": "Save" },
+  "saved": { "message": "Saved" }
+}

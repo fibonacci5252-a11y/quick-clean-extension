@@ -6,6 +6,9 @@ Quick Clean
 ## Short description (132 characters max)
 Clear your browsing data in one click — history, cookies, cache and more. Fast, private, configurable.
 
+## Version
+1.1.0 — adds per-site cleaning, local statistics, light/dark themes and English/French interface.
+
 ## Detailed description
 
 🧹 Quick Clean — Clean your browser in one click
@@ -29,6 +32,10 @@ Take back control of your privacy. Quick Clean wipes your browsing data instantl
 
 ⚡ KEY FEATURES:
 
+🌐 Clean this site only — Remove cookies, site storage and history for the current website without touching anything else
+📊 Local statistics — See how many cleanups, cookies and history entries you have removed (stored only on your device)
+🌗 Light and dark themes — Follow your system or pick your own
+🌍 English and French — The interface follows your browser language
 🕐 Flexible time range — Choose between 1 hour, 24 hours, 7 days or all time
 🛡️ Whitelist — Protect cookies from your important sites (banking, email...)
 ⌨️ Keyboard shortcut — Clean with Ctrl+Shift+E without opening the popup
