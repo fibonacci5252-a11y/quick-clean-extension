@@ -288,7 +288,7 @@ kbd {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--accent);
+  color: var(--accent-text);
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;

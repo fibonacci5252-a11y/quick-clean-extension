@@ -14,7 +14,7 @@ const DEFAULT_SETTINGS = {
   timeRange:         "hour"
 };
 
-const DEFAULT_STATS = { cleanups: 0, cookies: 0, history: 0 };
+const DEFAULT_STATS = { cleanups: 0, sites: 0, history: 0 };
 
 const btnClean   = document.getElementById("btnClean");
 const btnText    = document.getElementById("btnText");
@@ -51,7 +51,7 @@ function formatLastClean(ts) {
 function renderStats(stats) {
   const s = Object.assign({}, DEFAULT_STATS, stats);
   document.getElementById("statCleanups").textContent = s.cleanups.toLocaleString();
-  document.getElementById("statCookies").textContent  = s.cookies.toLocaleString();
+  document.getElementById("statSites").textContent    = s.sites.toLocaleString();
   document.getElementById("statHistory").textContent  = s.history.toLocaleString();
 }
 
@@ -127,7 +127,7 @@ function handleCleanSite() {
     btnSite.disabled = false;
     if (response && response.success) {
       showStatus(
-        qcT("siteDone", [response.host, String(response.counts.cookies), String(response.counts.history)]),
+        qcT("siteDone", [response.host, String(response.counts.history)]),
         false
       );
       lastClean.textContent = formatLastClean(Date.now());

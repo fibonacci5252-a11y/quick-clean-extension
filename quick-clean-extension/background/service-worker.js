@@ -20,7 +20,7 @@ const DEFAULT_SETTINGS = {
   cleanOnStartup:    false
 };
 
-const DEFAULT_STATS = { cleanups: 0, cookies: 0, history: 0 };
+const DEFAULT_STATS = { cleanups: 0, sites: 0, history: 0 };
 
 function getSettings() {
   return new Promise((resolve) => {
@@ -43,9 +43,9 @@ async function addStats(delta) {
   const { stats } = await chrome.storage.local.get({ stats: DEFAULT_STATS });
   await chrome.storage.local.set({
     stats: {
-      cleanups: stats.cleanups + 1,
-      cookies:  stats.cookies + (delta.cookies || 0),
-      history:  stats.history + (delta.history || 0)
+      cleanups: (stats.cleanups || 0) + 1,
+      sites:    (stats.sites || 0) + (delta.sites || 0),
+      history:  (stats.history || 0) + (delta.history || 0)
     }
   });
 }
@@ -59,23 +59,15 @@ async function countHistory(since) {
   return items.length;
 }
 
-function removeCookie(cookie) {
-  const protocol = cookie.secure ? "https" : "http";
-  const domain = cookie.domain.startsWith(".") ? cookie.domain.slice(1) : cookie.domain;
-  const url = `${protocol}://${domain}${cookie.path}`;
-  return new Promise((resolve) => chrome.cookies.remove({ url, name: cookie.name }, resolve));
-}
-
-async function clearCookiesWithWhitelist(whitelist) {
-  const cookies = await chrome.cookies.getAll({});
-  const toDelete = cookies.filter((cookie) => {
-    const domain = cookie.domain.replace(/^\./, "");
-    return !whitelist.some((w) => domain === w || domain.endsWith("." + w));
-  });
-  for (const cookie of toDelete) {
-    await removeCookie(cookie);
+// A protected domain keeps its data on the bare domain and on www.
+function whitelistToOrigins(whitelist) {
+  const origins = [];
+  for (const domain of whitelist) {
+    for (const host of [domain, `www.${domain}`]) {
+      origins.push(`https://${host}`, `http://${host}`);
+    }
   }
-  return toDelete.length;
+  return origins;
 }
 
 async function closeAllTabs() {
@@ -87,35 +79,45 @@ async function closeAllTabs() {
 async function runCleanup(source = "manual") {
   const settings = await getSettings();
   const since = getSinceTimestamp(settings.timeRange);
-  const dataTypes = {};
   const report = [];
-  const counts = { cookies: 0, history: 0 };
+  const counts = { history: 0 };
 
-  if (settings.clearHistory)      dataTypes.history      = true;
-  if (settings.clearCache)        dataTypes.cache        = true;
-  if (settings.clearDownloads)    dataTypes.downloads    = true;
-  if (settings.clearFormData)     dataTypes.formData     = true;
-  if (settings.clearPasswords)    dataTypes.passwords    = true;
+  // Data types that cannot be scoped by origin
+  const globalTypes = {};
+  if (settings.clearHistory)   globalTypes.history   = true;
+  if (settings.clearDownloads) globalTypes.downloads = true;
+  if (settings.clearFormData)  globalTypes.formData  = true;
+  if (settings.clearPasswords) globalTypes.passwords = true;
+
+  // Data types where protected sites can be excluded
+  const siteTypes = {};
+  if (settings.clearCookies)      siteTypes.cookies      = true;
+  if (settings.clearCache)        siteTypes.cache        = true;
   if (settings.clearLocalStorage) {
-    dataTypes.localStorage = true;
-    dataTypes.indexedDB    = true;
+    siteTypes.localStorage = true;
+    siteTypes.indexedDB    = true;
   }
 
   if (settings.clearHistory) counts.history = await countHistory(since);
 
-  await chrome.browsingData.remove({ since }, dataTypes);
+  if (Object.keys(globalTypes).length > 0) {
+    await chrome.browsingData.remove({ since }, globalTypes);
+  }
+  if (Object.keys(siteTypes).length > 0) {
+    const options = { since };
+    if (settings.whitelist.length > 0) {
+      options.excludeOrigins = whitelistToOrigins(settings.whitelist);
+    }
+    await chrome.browsingData.remove(options, siteTypes);
+  }
 
   if (settings.clearHistory)      report.push(`${t("rHistory")} (${counts.history})`);
+  if (settings.clearCookies)      report.push(t("rCookies"));
   if (settings.clearCache)        report.push(t("rCache"));
   if (settings.clearDownloads)    report.push(t("rDownloads"));
   if (settings.clearFormData)     report.push(t("rForms"));
   if (settings.clearPasswords)    report.push(t("rPasswords"));
   if (settings.clearLocalStorage) report.push(t("rLocalStorage"));
-
-  if (settings.clearCookies) {
-    counts.cookies = await clearCookiesWithWhitelist(settings.whitelist);
-    report.push(`${t("rCookies")} (${counts.cookies})`);
-  }
 
   if (settings.closeTabs) {
     await closeAllTabs();
@@ -149,14 +151,9 @@ async function cleanSite(url) {
   }
   const host = parsed.hostname;
 
-  const cookies = await chrome.cookies.getAll({ url: parsed.href });
-  for (const cookie of cookies) {
-    await removeCookie(cookie);
-  }
-
   await chrome.browsingData.remove(
     { origins: [parsed.origin] },
-    { localStorage: true, indexedDB: true, cacheStorage: true }
+    { cookies: true, localStorage: true, indexedDB: true, cacheStorage: true }
   );
 
   const entries = await chrome.history.search({ text: host, startTime: 0, maxResults: 100000 });
@@ -165,7 +162,7 @@ async function cleanSite(url) {
   });
   await Promise.all(siteEntries.map((entry) => chrome.history.deleteUrl({ url: entry.url })));
 
-  const counts = { cookies: cookies.length, history: siteEntries.length };
+  const counts = { sites: 1, history: siteEntries.length };
   await addStats(counts);
   await chrome.storage.local.set({ lastClean: Date.now() });
 

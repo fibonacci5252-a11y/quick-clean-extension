@@ -27,11 +27,10 @@
   "btnCleanSite": { "message": "Nettoyer le site" },
   "siteUnavailable": { "message": "Ouvrez un site web pour le nettoyer seul." },
   "siteDone": {
-    "message": "$HOST$ nettoyé : $COOKIES$ cookies, $HISTORY$ pages d'historique",
+    "message": "$HOST$ nettoyé : cookies, données du site et $HISTORY$ pages d'historique",
     "placeholders": {
       "host": { "content": "$1" },
-      "cookies": { "content": "$2" },
-      "history": { "content": "$3" }
+      "history": { "content": "$2" }
     }
   },
 
@@ -70,13 +69,13 @@
   },
 
   "statsCleanups": { "message": "Nettoyages" },
-  "statsCookies": { "message": "Cookies" },
+  "statsSites": { "message": "Sites" },
   "statsHistory": { "message": "Historique" },
 
   "optionsTitle": { "message": "Quick Clean — Paramètres" },
   "advancedSettings": { "message": "Paramètres avancés" },
   "whitelistTitle": { "message": "Domaines protégés (liste blanche)" },
-  "whitelistDesc": { "message": "Ces domaines ne seront jamais touchés lors du nettoyage des cookies." },
+  "whitelistDesc": { "message": "Ces sites conservent leurs cookies et données de site lors du nettoyage." },
   "domainPlaceholder": { "message": "exemple.com" },
   "btnAdd": { "message": "Ajouter" },
   "emptyWhitelist": { "message": "Aucun domaine protégé." },

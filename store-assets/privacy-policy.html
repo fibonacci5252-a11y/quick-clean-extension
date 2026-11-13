@@ -35,8 +35,8 @@
     <h2>Permissions used</h2>
     <p>The extension uses the following Chrome permissions, exclusively for its functionality:</p>
     <ul>
-      <li><strong>browsingData</strong> — Delete browsing history, cache, form data and saved passwords.</li>
-      <li><strong>cookies</strong> and <strong>host_permissions (all_urls)</strong> — Read and delete cookies from all sites, while respecting the user-configured whitelist.</li>
+      <li><strong>browsingData</strong> — Delete cookies, cache, local storage, form data, saved passwords and download history, while skipping the sites on your whitelist.</li>
+      <li><strong>activeTab</strong> — When you open the popup, read the address of the current tab so you can clean that single site. No access to other tabs or sites.</li>
       <li><strong>history</strong> — Read and delete browsing history entries, and count them for your local statistics.</li>
       <li><strong>tabs API</strong> — Used without the tabs permission to close open tabs when the option is enabled (no access to URLs or titles).</li>
       <li><strong>storage</strong> — Save your preferences locally (cleanup settings, whitelist).</li>
@@ -44,7 +44,7 @@
     </ul>
 
     <h2>Local storage</h2>
-    <p>The only data stored is your configuration preferences (which data to clean, time range, protected domains, theme) and simple usage totals (number of cleanups, and how many cookies and history entries were removed). This data stays in Chrome's storage and never leaves your device. You can reset the totals at any time from the settings page.</p>
+    <p>The only data stored is your configuration preferences (which data to clean, time range, protected domains, theme) and simple usage totals (number of cleanups, sites cleaned, and history entries removed). This data stays in Chrome's storage and never leaves your device. You can reset the totals at any time from the settings page.</p>
     <p>When you open the popup, the address of the active tab is read locally so the extension can offer to clean that single site. It is never stored or transmitted.</p>
 
     <h2>Data sharing</h2>
