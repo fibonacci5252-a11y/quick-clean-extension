@@ -2,12 +2,10 @@
   "manifest_version": 3,
   "name": "Quick Clean",
   "version": "1.0.0",
-  "description": "Supprimez vos données de navigation en un clic — historique, cookies, cache et plus.",
+  "description": "Clear your browsing data in one click — history, cookies, cache and more.",
   "permissions": [
     "browsingData",
     "history",
-    "tabs",
-    "downloads",
     "cookies",
     "storage",
     "notifications"
