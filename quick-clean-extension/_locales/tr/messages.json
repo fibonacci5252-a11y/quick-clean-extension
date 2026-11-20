@@ -1,0 +1,254 @@
+{
+  "extName": {
+    "message": "Quick Clean"
+  },
+  "extDescription": {
+    "message": "Tarama verilerinizi tek tıkla silin: geçmiş, çerezler, önbellek ve daha fazlası."
+  },
+  "cmdClean": {
+    "message": "Tarama verilerini temizle"
+  },
+  "settingsTitle": {
+    "message": "Ayarlar"
+  },
+  "themeToggle": {
+    "message": "Temayı değiştir"
+  },
+  "period": {
+    "message": "Dönem"
+  },
+  "range1h": {
+    "message": "1 saat"
+  },
+  "range24h": {
+    "message": "24 sa"
+  },
+  "range7d": {
+    "message": "7 gün"
+  },
+  "rangeAll": {
+    "message": "Tümü"
+  },
+  "dataToClear": {
+    "message": "Silinecek veriler"
+  },
+  "optHistory": {
+    "message": "Geçmiş"
+  },
+  "optCookies": {
+    "message": "Çerezler"
+  },
+  "optCache": {
+    "message": "Önbellek"
+  },
+  "optDownloads": {
+    "message": "İndirmeler"
+  },
+  "optForms": {
+    "message": "Formlar"
+  },
+  "optPasswords": {
+    "message": "Parolalar"
+  },
+  "optLocalStorage": {
+    "message": "Yerel depolama"
+  },
+  "optCloseTabs": {
+    "message": "Sekmeleri kapat"
+  },
+  "btnClean": {
+    "message": "Şimdi temizle"
+  },
+  "btnCleaning": {
+    "message": "Temizleniyor…"
+  },
+  "shortcutLabel": {
+    "message": "Kısayol:"
+  },
+  "thisSite": {
+    "message": "Bu site"
+  },
+  "btnCleanSite": {
+    "message": "Siteyi temizle"
+  },
+  "siteUnavailable": {
+    "message": "Tek tek temizlemek için bir web sitesi açın."
+  },
+  "siteDone": {
+    "message": "$HOST$ temizlendi: çerezler, site verileri ve $HISTORY$ geçmiş kaydı",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      },
+      "history": {
+        "content": "$2"
+      }
+    }
+  },
+  "statusRemoved": {
+    "message": "Silindi: $ITEMS$",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusNothing": {
+    "message": "Temizlenecek bir şey yok."
+  },
+  "statusError": {
+    "message": "Temizleme başarısız oldu."
+  },
+  "lastNow": {
+    "message": "Son temizlik: az önce"
+  },
+  "lastMinutes": {
+    "message": "Son temizlik: $N$ dk önce",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastHours": {
+    "message": "Son temizlik: $N$ sa önce",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastDays": {
+    "message": "Son temizlik: $N$ gün önce",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "rHistory": {
+    "message": "geçmiş"
+  },
+  "rCache": {
+    "message": "önbellek"
+  },
+  "rDownloads": {
+    "message": "indirmeler"
+  },
+  "rForms": {
+    "message": "formlar"
+  },
+  "rPasswords": {
+    "message": "parolalar"
+  },
+  "rLocalStorage": {
+    "message": "yerel depolama"
+  },
+  "rCookies": {
+    "message": "çerezler"
+  },
+  "rTabs": {
+    "message": "sekmeler"
+  },
+  "notifTitle": {
+    "message": "Quick Clean ✓"
+  },
+  "notifMessage": {
+    "message": "Temizlendi: $ITEMS$.",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statsCleanups": {
+    "message": "Temizlik"
+  },
+  "statsSites": {
+    "message": "Siteler"
+  },
+  "statsHistory": {
+    "message": "Geçmiş"
+  },
+  "optionsTitle": {
+    "message": "Quick Clean — Ayarlar"
+  },
+  "advancedSettings": {
+    "message": "Gelişmiş ayarlar"
+  },
+  "whitelistTitle": {
+    "message": "Korunan alan adları (beyaz liste)"
+  },
+  "whitelistDesc": {
+    "message": "Bu siteler temizlik sırasında çerezlerini ve verilerini korur."
+  },
+  "domainPlaceholder": {
+    "message": "ornek.com"
+  },
+  "btnAdd": {
+    "message": "Ekle"
+  },
+  "emptyWhitelist": {
+    "message": "Korunan alan adı yok."
+  },
+  "remove": {
+    "message": "Kaldır"
+  },
+  "behaviorTitle": {
+    "message": "Davranış"
+  },
+  "notifOptTitle": {
+    "message": "Bildirimler"
+  },
+  "notifOptDesc": {
+    "message": "Her temizlikten sonra bildirim göster."
+  },
+  "startupTitle": {
+    "message": "Başlangıçta temizle"
+  },
+  "startupDesc": {
+    "message": "Chrome açıldığında otomatik temizle."
+  },
+  "appearanceTitle": {
+    "message": "Görünüm"
+  },
+  "themeLabel": {
+    "message": "Tema"
+  },
+  "themeAuto": {
+    "message": "Otomatik (sistem)"
+  },
+  "themeLight": {
+    "message": "Açık"
+  },
+  "themeDark": {
+    "message": "Koyu"
+  },
+  "statsTitle": {
+    "message": "İstatistikler"
+  },
+  "statsDesc": {
+    "message": "Quick Clean kullanmaya başladığınızdan beri toplamlar. Yalnızca bu cihazda saklanır."
+  },
+  "statsReset": {
+    "message": "İstatistikleri sıfırla"
+  },
+  "shortcutTitle": {
+    "message": "Klavye kısayolu"
+  },
+  "shortcutDefault": {
+    "message": "Varsayılan kısayol:"
+  },
+  "shortcutChange": {
+    "message": "Değiştirmek için Chrome'un uzantı kısayolları ayarlarını açın."
+  },
+  "shortcutManage": {
+    "message": "Uzantı kısayollarını yönet"
+  },
+  "btnSave": {
+    "message": "Kaydet"
+  },
+  "saved": {
+    "message": "Kaydedildi"
+  }
+}

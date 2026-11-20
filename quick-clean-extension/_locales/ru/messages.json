@@ -1,0 +1,254 @@
+{
+  "extName": {
+    "message": "Quick Clean"
+  },
+  "extDescription": {
+    "message": "Удаляйте данные браузера одним щелчком: историю, файлы cookie, кэш и другое."
+  },
+  "cmdClean": {
+    "message": "Очистить данные браузера"
+  },
+  "settingsTitle": {
+    "message": "Настройки"
+  },
+  "themeToggle": {
+    "message": "Сменить тему"
+  },
+  "period": {
+    "message": "Период"
+  },
+  "range1h": {
+    "message": "1 час"
+  },
+  "range24h": {
+    "message": "24 ч"
+  },
+  "range7d": {
+    "message": "7 дней"
+  },
+  "rangeAll": {
+    "message": "Всё"
+  },
+  "dataToClear": {
+    "message": "Что удалить"
+  },
+  "optHistory": {
+    "message": "История"
+  },
+  "optCookies": {
+    "message": "Cookie"
+  },
+  "optCache": {
+    "message": "Кэш"
+  },
+  "optDownloads": {
+    "message": "Загрузки"
+  },
+  "optForms": {
+    "message": "Формы"
+  },
+  "optPasswords": {
+    "message": "Пароли"
+  },
+  "optLocalStorage": {
+    "message": "Локальное хранилище"
+  },
+  "optCloseTabs": {
+    "message": "Закрыть вкладки"
+  },
+  "btnClean": {
+    "message": "Очистить"
+  },
+  "btnCleaning": {
+    "message": "Очистка…"
+  },
+  "shortcutLabel": {
+    "message": "Клавиши:"
+  },
+  "thisSite": {
+    "message": "Этот сайт"
+  },
+  "btnCleanSite": {
+    "message": "Очистить сайт"
+  },
+  "siteUnavailable": {
+    "message": "Откройте сайт, чтобы очистить его отдельно."
+  },
+  "siteDone": {
+    "message": "$HOST$ очищен: cookie, данные сайта и записи истории ($HISTORY$)",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      },
+      "history": {
+        "content": "$2"
+      }
+    }
+  },
+  "statusRemoved": {
+    "message": "Удалено: $ITEMS$",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusNothing": {
+    "message": "Нечего очищать."
+  },
+  "statusError": {
+    "message": "Не удалось очистить."
+  },
+  "lastNow": {
+    "message": "Последняя очистка: только что"
+  },
+  "lastMinutes": {
+    "message": "Последняя очистка: $N$ мин назад",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastHours": {
+    "message": "Последняя очистка: $N$ ч назад",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastDays": {
+    "message": "Последняя очистка: $N$ дн. назад",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "rHistory": {
+    "message": "история"
+  },
+  "rCache": {
+    "message": "кэш"
+  },
+  "rDownloads": {
+    "message": "загрузки"
+  },
+  "rForms": {
+    "message": "формы"
+  },
+  "rPasswords": {
+    "message": "пароли"
+  },
+  "rLocalStorage": {
+    "message": "локальное хранилище"
+  },
+  "rCookies": {
+    "message": "cookie"
+  },
+  "rTabs": {
+    "message": "вкладки"
+  },
+  "notifTitle": {
+    "message": "Quick Clean ✓"
+  },
+  "notifMessage": {
+    "message": "Очищено: $ITEMS$.",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statsCleanups": {
+    "message": "Очистки"
+  },
+  "statsSites": {
+    "message": "Сайты"
+  },
+  "statsHistory": {
+    "message": "История"
+  },
+  "optionsTitle": {
+    "message": "Quick Clean — Настройки"
+  },
+  "advancedSettings": {
+    "message": "Расширенные настройки"
+  },
+  "whitelistTitle": {
+    "message": "Защищённые домены (белый список)"
+  },
+  "whitelistDesc": {
+    "message": "Эти сайты сохраняют cookie и данные при очистке."
+  },
+  "domainPlaceholder": {
+    "message": "example.com"
+  },
+  "btnAdd": {
+    "message": "Добавить"
+  },
+  "emptyWhitelist": {
+    "message": "Нет защищённых доменов."
+  },
+  "remove": {
+    "message": "Удалить"
+  },
+  "behaviorTitle": {
+    "message": "Поведение"
+  },
+  "notifOptTitle": {
+    "message": "Уведомления"
+  },
+  "notifOptDesc": {
+    "message": "Показывать уведомление после каждой очистки."
+  },
+  "startupTitle": {
+    "message": "Очистка при запуске"
+  },
+  "startupDesc": {
+    "message": "Очищать автоматически при запуске Chrome."
+  },
+  "appearanceTitle": {
+    "message": "Оформление"
+  },
+  "themeLabel": {
+    "message": "Тема"
+  },
+  "themeAuto": {
+    "message": "Авто (как в системе)"
+  },
+  "themeLight": {
+    "message": "Светлая"
+  },
+  "themeDark": {
+    "message": "Тёмная"
+  },
+  "statsTitle": {
+    "message": "Статистика"
+  },
+  "statsDesc": {
+    "message": "Итоги с начала использования Quick Clean. Хранятся только на этом устройстве."
+  },
+  "statsReset": {
+    "message": "Сбросить статистику"
+  },
+  "shortcutTitle": {
+    "message": "Сочетание клавиш"
+  },
+  "shortcutDefault": {
+    "message": "Сочетание по умолчанию:"
+  },
+  "shortcutChange": {
+    "message": "Чтобы изменить его, откройте настройки быстрых клавиш расширений в Chrome."
+  },
+  "shortcutManage": {
+    "message": "Управление быстрыми клавишами"
+  },
+  "btnSave": {
+    "message": "Сохранить"
+  },
+  "saved": {
+    "message": "Сохранено"
+  }
+}

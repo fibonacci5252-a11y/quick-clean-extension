@@ -8,6 +8,8 @@
 
 [hidden] { display: none !important; }
 
+button, kbd { line-height: inherit; }
+
 :root {
   --bg:          #090909;
   --surface:     #131313;
@@ -58,6 +60,7 @@
 body {
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 13px;
+  line-height: 1.2;
   background: var(--bg);
   color: var(--text);
   width: 300px;
@@ -283,6 +286,13 @@ kbd {
   color: var(--accent-text);
   font-size: 11.5px;
   font-weight: 500;
+}
+.status-bar span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  line-height: 1.3;
 }
 .status-bar.error {
   background: rgba(255, 79, 79, 0.08);

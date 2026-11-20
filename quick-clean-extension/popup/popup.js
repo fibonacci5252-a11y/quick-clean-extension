@@ -57,6 +57,7 @@ function renderStats(stats) {
 
 function showStatus(text, isError) {
   statusText.textContent = text;
+  statusText.title = text;
   statusBar.classList.toggle("error", !!isError);
   statusBar.hidden = false;
 }

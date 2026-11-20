@@ -7,7 +7,7 @@ Quick Clean
 Clear your browsing data in one click — history, cookies, cache and more. Fast, private, configurable.
 
 ## Version
-1.1.1 — adds per-site cleaning, local statistics, light/dark themes and English/French interface. Uses activeTab and no broad host permissions.
+1.2.0 — adds 12 interface languages (14 in total, including right-to-left Arabic) on top of per-site cleaning, local statistics and light/dark themes. Uses activeTab and no broad host permissions.
 
 ## Detailed description
 
@@ -35,7 +35,7 @@ Take back control of your privacy. Quick Clean wipes your browsing data instantl
 🌐 Clean this site only — Remove cookies, site storage and history for the current website without touching anything else
 📊 Local statistics — See how many cleanups, sites and history entries you have cleaned (stored only on your device)
 🌗 Light and dark themes — Follow your system or pick your own
-🌍 English and French — The interface follows your browser language
+🌍 14 languages — English, Français, Español, Português, Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. The interface follows your browser language
 🕐 Flexible time range — Choose between 1 hour, 24 hours, 7 days or all time
 🛡️ Whitelist — Protect cookies from your important sites (banking, email...)
 ⌨️ Keyboard shortcut — Clean with Ctrl+Shift+E without opening the popup

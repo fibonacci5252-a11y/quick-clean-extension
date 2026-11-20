@@ -1,0 +1,254 @@
+{
+  "extName": {
+    "message": "Quick Clean"
+  },
+  "extDescription": {
+    "message": "Hapus data penjelajahan dengan satu klik: riwayat, cookie, cache, dan lainnya."
+  },
+  "cmdClean": {
+    "message": "Bersihkan data penjelajahan"
+  },
+  "settingsTitle": {
+    "message": "Setelan"
+  },
+  "themeToggle": {
+    "message": "Ganti tema"
+  },
+  "period": {
+    "message": "Periode"
+  },
+  "range1h": {
+    "message": "1 jam"
+  },
+  "range24h": {
+    "message": "24 jam"
+  },
+  "range7d": {
+    "message": "7 hari"
+  },
+  "rangeAll": {
+    "message": "Semua"
+  },
+  "dataToClear": {
+    "message": "Data yang dihapus"
+  },
+  "optHistory": {
+    "message": "Riwayat"
+  },
+  "optCookies": {
+    "message": "Cookie"
+  },
+  "optCache": {
+    "message": "Cache"
+  },
+  "optDownloads": {
+    "message": "Unduhan"
+  },
+  "optForms": {
+    "message": "Formulir"
+  },
+  "optPasswords": {
+    "message": "Kata sandi"
+  },
+  "optLocalStorage": {
+    "message": "Penyimpanan lokal"
+  },
+  "optCloseTabs": {
+    "message": "Tutup tab"
+  },
+  "btnClean": {
+    "message": "Bersihkan sekarang"
+  },
+  "btnCleaning": {
+    "message": "Membersihkan…"
+  },
+  "shortcutLabel": {
+    "message": "Pintasan:"
+  },
+  "thisSite": {
+    "message": "Situs ini"
+  },
+  "btnCleanSite": {
+    "message": "Bersihkan situs"
+  },
+  "siteUnavailable": {
+    "message": "Buka situs web untuk membersihkannya secara terpisah."
+  },
+  "siteDone": {
+    "message": "$HOST$ dibersihkan: cookie, data situs, dan $HISTORY$ entri riwayat",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      },
+      "history": {
+        "content": "$2"
+      }
+    }
+  },
+  "statusRemoved": {
+    "message": "Dihapus: $ITEMS$",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusNothing": {
+    "message": "Tidak ada yang perlu dibersihkan."
+  },
+  "statusError": {
+    "message": "Gagal membersihkan."
+  },
+  "lastNow": {
+    "message": "Pembersihan terakhir: baru saja"
+  },
+  "lastMinutes": {
+    "message": "Pembersihan terakhir: $N$ mnt lalu",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastHours": {
+    "message": "Pembersihan terakhir: $N$ jam lalu",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastDays": {
+    "message": "Pembersihan terakhir: $N$ hari lalu",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "rHistory": {
+    "message": "riwayat"
+  },
+  "rCache": {
+    "message": "cache"
+  },
+  "rDownloads": {
+    "message": "unduhan"
+  },
+  "rForms": {
+    "message": "formulir"
+  },
+  "rPasswords": {
+    "message": "kata sandi"
+  },
+  "rLocalStorage": {
+    "message": "penyimpanan lokal"
+  },
+  "rCookies": {
+    "message": "cookie"
+  },
+  "rTabs": {
+    "message": "tab"
+  },
+  "notifTitle": {
+    "message": "Quick Clean ✓"
+  },
+  "notifMessage": {
+    "message": "Dibersihkan: $ITEMS$.",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statsCleanups": {
+    "message": "Pembersihan"
+  },
+  "statsSites": {
+    "message": "Situs"
+  },
+  "statsHistory": {
+    "message": "Riwayat"
+  },
+  "optionsTitle": {
+    "message": "Quick Clean — Setelan"
+  },
+  "advancedSettings": {
+    "message": "Setelan lanjutan"
+  },
+  "whitelistTitle": {
+    "message": "Domain yang dilindungi (daftar putih)"
+  },
+  "whitelistDesc": {
+    "message": "Situs ini tetap menyimpan cookie dan datanya saat pembersihan."
+  },
+  "domainPlaceholder": {
+    "message": "example.com"
+  },
+  "btnAdd": {
+    "message": "Tambah"
+  },
+  "emptyWhitelist": {
+    "message": "Tidak ada domain yang dilindungi."
+  },
+  "remove": {
+    "message": "Hapus"
+  },
+  "behaviorTitle": {
+    "message": "Perilaku"
+  },
+  "notifOptTitle": {
+    "message": "Notifikasi"
+  },
+  "notifOptDesc": {
+    "message": "Tampilkan notifikasi setelah setiap pembersihan."
+  },
+  "startupTitle": {
+    "message": "Bersihkan saat dimulai"
+  },
+  "startupDesc": {
+    "message": "Bersihkan otomatis saat Chrome dibuka."
+  },
+  "appearanceTitle": {
+    "message": "Tampilan"
+  },
+  "themeLabel": {
+    "message": "Tema"
+  },
+  "themeAuto": {
+    "message": "Otomatis (sistem)"
+  },
+  "themeLight": {
+    "message": "Terang"
+  },
+  "themeDark": {
+    "message": "Gelap"
+  },
+  "statsTitle": {
+    "message": "Statistik"
+  },
+  "statsDesc": {
+    "message": "Total sejak Anda mulai memakai Quick Clean. Hanya disimpan di perangkat ini."
+  },
+  "statsReset": {
+    "message": "Atur ulang statistik"
+  },
+  "shortcutTitle": {
+    "message": "Pintasan keyboard"
+  },
+  "shortcutDefault": {
+    "message": "Pintasan default:"
+  },
+  "shortcutChange": {
+    "message": "Untuk mengubahnya, buka setelan pintasan ekstensi Chrome."
+  },
+  "shortcutManage": {
+    "message": "Kelola pintasan ekstensi"
+  },
+  "btnSave": {
+    "message": "Simpan"
+  },
+  "saved": {
+    "message": "Tersimpan"
+  }
+}

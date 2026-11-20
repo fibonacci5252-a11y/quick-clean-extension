@@ -1,0 +1,254 @@
+{
+  "extName": {
+    "message": "Quick Clean"
+  },
+  "extDescription": {
+    "message": "一键清除浏览数据：历史记录、Cookie、缓存等。"
+  },
+  "cmdClean": {
+    "message": "清理浏览数据"
+  },
+  "settingsTitle": {
+    "message": "设置"
+  },
+  "themeToggle": {
+    "message": "切换主题"
+  },
+  "period": {
+    "message": "时间范围"
+  },
+  "range1h": {
+    "message": "1 小时"
+  },
+  "range24h": {
+    "message": "24 小时"
+  },
+  "range7d": {
+    "message": "7 天"
+  },
+  "rangeAll": {
+    "message": "全部"
+  },
+  "dataToClear": {
+    "message": "要清除的数据"
+  },
+  "optHistory": {
+    "message": "历史记录"
+  },
+  "optCookies": {
+    "message": "Cookie"
+  },
+  "optCache": {
+    "message": "缓存"
+  },
+  "optDownloads": {
+    "message": "下载记录"
+  },
+  "optForms": {
+    "message": "表单数据"
+  },
+  "optPasswords": {
+    "message": "密码"
+  },
+  "optLocalStorage": {
+    "message": "本地存储"
+  },
+  "optCloseTabs": {
+    "message": "关闭标签页"
+  },
+  "btnClean": {
+    "message": "立即清理"
+  },
+  "btnCleaning": {
+    "message": "正在清理…"
+  },
+  "shortcutLabel": {
+    "message": "快捷键："
+  },
+  "thisSite": {
+    "message": "当前网站"
+  },
+  "btnCleanSite": {
+    "message": "清理本站"
+  },
+  "siteUnavailable": {
+    "message": "打开一个网站即可单独清理它。"
+  },
+  "siteDone": {
+    "message": "已清理 $HOST$：Cookie、网站数据和 $HISTORY$ 条历史记录",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      },
+      "history": {
+        "content": "$2"
+      }
+    }
+  },
+  "statusRemoved": {
+    "message": "已清除：$ITEMS$",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusNothing": {
+    "message": "没有可清理的内容。"
+  },
+  "statusError": {
+    "message": "清理失败。"
+  },
+  "lastNow": {
+    "message": "上次清理：刚刚"
+  },
+  "lastMinutes": {
+    "message": "上次清理：$N$ 分钟前",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastHours": {
+    "message": "上次清理：$N$ 小时前",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastDays": {
+    "message": "上次清理：$N$ 天前",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "rHistory": {
+    "message": "历史记录"
+  },
+  "rCache": {
+    "message": "缓存"
+  },
+  "rDownloads": {
+    "message": "下载记录"
+  },
+  "rForms": {
+    "message": "表单数据"
+  },
+  "rPasswords": {
+    "message": "密码"
+  },
+  "rLocalStorage": {
+    "message": "本地存储"
+  },
+  "rCookies": {
+    "message": "Cookie"
+  },
+  "rTabs": {
+    "message": "标签页"
+  },
+  "notifTitle": {
+    "message": "Quick Clean ✓"
+  },
+  "notifMessage": {
+    "message": "已清理：$ITEMS$。",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statsCleanups": {
+    "message": "清理次数"
+  },
+  "statsSites": {
+    "message": "网站"
+  },
+  "statsHistory": {
+    "message": "历史记录"
+  },
+  "optionsTitle": {
+    "message": "Quick Clean — 设置"
+  },
+  "advancedSettings": {
+    "message": "高级设置"
+  },
+  "whitelistTitle": {
+    "message": "受保护的域名（白名单）"
+  },
+  "whitelistDesc": {
+    "message": "清理时，这些网站会保留其 Cookie 和数据。"
+  },
+  "domainPlaceholder": {
+    "message": "example.com"
+  },
+  "btnAdd": {
+    "message": "添加"
+  },
+  "emptyWhitelist": {
+    "message": "没有受保护的域名。"
+  },
+  "remove": {
+    "message": "移除"
+  },
+  "behaviorTitle": {
+    "message": "行为"
+  },
+  "notifOptTitle": {
+    "message": "通知"
+  },
+  "notifOptDesc": {
+    "message": "每次清理后显示通知。"
+  },
+  "startupTitle": {
+    "message": "启动时清理"
+  },
+  "startupDesc": {
+    "message": "Chrome 启动时自动清理。"
+  },
+  "appearanceTitle": {
+    "message": "外观"
+  },
+  "themeLabel": {
+    "message": "主题"
+  },
+  "themeAuto": {
+    "message": "自动（跟随系统）"
+  },
+  "themeLight": {
+    "message": "浅色"
+  },
+  "themeDark": {
+    "message": "深色"
+  },
+  "statsTitle": {
+    "message": "统计"
+  },
+  "statsDesc": {
+    "message": "自开始使用 Quick Clean 以来的累计数据，仅保存在此设备上。"
+  },
+  "statsReset": {
+    "message": "重置统计"
+  },
+  "shortcutTitle": {
+    "message": "键盘快捷键"
+  },
+  "shortcutDefault": {
+    "message": "默认快捷键："
+  },
+  "shortcutChange": {
+    "message": "如需更改，请打开 Chrome 的扩展程序快捷键设置。"
+  },
+  "shortcutManage": {
+    "message": "管理扩展程序快捷键"
+  },
+  "btnSave": {
+    "message": "保存"
+  },
+  "saved": {
+    "message": "已保存"
+  }
+}

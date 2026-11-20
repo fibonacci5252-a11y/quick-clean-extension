@@ -1,0 +1,254 @@
+{
+  "extName": {
+    "message": "Quick Clean"
+  },
+  "extDescription": {
+    "message": "Elimina i dati di navigazione con un clic: cronologia, cookie, cache e altro."
+  },
+  "cmdClean": {
+    "message": "Pulisci dati di navigazione"
+  },
+  "settingsTitle": {
+    "message": "Impostazioni"
+  },
+  "themeToggle": {
+    "message": "Cambia tema"
+  },
+  "period": {
+    "message": "Periodo"
+  },
+  "range1h": {
+    "message": "1 ora"
+  },
+  "range24h": {
+    "message": "24 h"
+  },
+  "range7d": {
+    "message": "7 giorni"
+  },
+  "rangeAll": {
+    "message": "Tutto"
+  },
+  "dataToClear": {
+    "message": "Dati da eliminare"
+  },
+  "optHistory": {
+    "message": "Cronologia"
+  },
+  "optCookies": {
+    "message": "Cookie"
+  },
+  "optCache": {
+    "message": "Cache"
+  },
+  "optDownloads": {
+    "message": "Download"
+  },
+  "optForms": {
+    "message": "Moduli"
+  },
+  "optPasswords": {
+    "message": "Password"
+  },
+  "optLocalStorage": {
+    "message": "Archivio locale"
+  },
+  "optCloseTabs": {
+    "message": "Chiudi schede"
+  },
+  "btnClean": {
+    "message": "Pulisci ora"
+  },
+  "btnCleaning": {
+    "message": "Pulizia in corso…"
+  },
+  "shortcutLabel": {
+    "message": "Scorciatoia:"
+  },
+  "thisSite": {
+    "message": "Questo sito"
+  },
+  "btnCleanSite": {
+    "message": "Pulisci sito"
+  },
+  "siteUnavailable": {
+    "message": "Apri un sito web per pulirlo singolarmente."
+  },
+  "siteDone": {
+    "message": "$HOST$ pulito: cookie, dati del sito e $HISTORY$ voci della cronologia",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      },
+      "history": {
+        "content": "$2"
+      }
+    }
+  },
+  "statusRemoved": {
+    "message": "Eliminati: $ITEMS$",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusNothing": {
+    "message": "Niente da pulire."
+  },
+  "statusError": {
+    "message": "Pulizia non riuscita."
+  },
+  "lastNow": {
+    "message": "Ultima pulizia: adesso"
+  },
+  "lastMinutes": {
+    "message": "Ultima pulizia: $N$ min fa",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastHours": {
+    "message": "Ultima pulizia: $N$ h fa",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastDays": {
+    "message": "Ultima pulizia: $N$ g fa",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "rHistory": {
+    "message": "cronologia"
+  },
+  "rCache": {
+    "message": "cache"
+  },
+  "rDownloads": {
+    "message": "download"
+  },
+  "rForms": {
+    "message": "moduli"
+  },
+  "rPasswords": {
+    "message": "password"
+  },
+  "rLocalStorage": {
+    "message": "archivio locale"
+  },
+  "rCookies": {
+    "message": "cookie"
+  },
+  "rTabs": {
+    "message": "schede"
+  },
+  "notifTitle": {
+    "message": "Quick Clean ✓"
+  },
+  "notifMessage": {
+    "message": "Pulito: $ITEMS$.",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statsCleanups": {
+    "message": "Pulizie"
+  },
+  "statsSites": {
+    "message": "Siti"
+  },
+  "statsHistory": {
+    "message": "Cronologia"
+  },
+  "optionsTitle": {
+    "message": "Quick Clean — Impostazioni"
+  },
+  "advancedSettings": {
+    "message": "Impostazioni avanzate"
+  },
+  "whitelistTitle": {
+    "message": "Domini protetti (lista consentita)"
+  },
+  "whitelistDesc": {
+    "message": "Questi siti mantengono cookie e dati durante la pulizia."
+  },
+  "domainPlaceholder": {
+    "message": "esempio.it"
+  },
+  "btnAdd": {
+    "message": "Aggiungi"
+  },
+  "emptyWhitelist": {
+    "message": "Nessun dominio protetto."
+  },
+  "remove": {
+    "message": "Rimuovi"
+  },
+  "behaviorTitle": {
+    "message": "Comportamento"
+  },
+  "notifOptTitle": {
+    "message": "Notifiche"
+  },
+  "notifOptDesc": {
+    "message": "Mostra una notifica dopo ogni pulizia."
+  },
+  "startupTitle": {
+    "message": "Pulisci all'avvio"
+  },
+  "startupDesc": {
+    "message": "Pulisci automaticamente all'avvio di Chrome."
+  },
+  "appearanceTitle": {
+    "message": "Aspetto"
+  },
+  "themeLabel": {
+    "message": "Tema"
+  },
+  "themeAuto": {
+    "message": "Automatico (sistema)"
+  },
+  "themeLight": {
+    "message": "Chiaro"
+  },
+  "themeDark": {
+    "message": "Scuro"
+  },
+  "statsTitle": {
+    "message": "Statistiche"
+  },
+  "statsDesc": {
+    "message": "Totali da quando usi Quick Clean. Sono salvati solo su questo dispositivo."
+  },
+  "statsReset": {
+    "message": "Azzera statistiche"
+  },
+  "shortcutTitle": {
+    "message": "Scorciatoia da tastiera"
+  },
+  "shortcutDefault": {
+    "message": "Scorciatoia predefinita:"
+  },
+  "shortcutChange": {
+    "message": "Per cambiarla, apri le impostazioni delle scorciatoie delle estensioni di Chrome."
+  },
+  "shortcutManage": {
+    "message": "Gestisci scorciatoie delle estensioni"
+  },
+  "btnSave": {
+    "message": "Salva"
+  },
+  "saved": {
+    "message": "Salvato"
+  }
+}
