@@ -34,7 +34,7 @@ Quick Clean
 🌐 このサイトだけ消去 — 現在のサイトの Cookie、データ、履歴だけを、ほかには触れずに削除
 📊 ローカル統計 — 消去した回数、サイト数、履歴の件数を確認（データはお使いのデバイスにのみ保存）
 🌗 ライト／ダークテーマ — システムに合わせるか、お好みで選択
-🌍 14 言語対応 — English, Français, Español, Português, Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia。表示言語はブラウザの言語に従います
+🌍 15 言語対応 — English, Français, Español, Português (Brasil · Portugal), Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia。表示言語はブラウザの言語に従います
 🕐 柔軟な期間指定 — 1時間、24時間、7日間、またはすべて
 🛡️ 許可リスト — 重要なサイト（銀行、メールなど）の Cookie を保護
 ⌨️ キーボードショートカット — ポップアップを開かずに Ctrl+Shift+E で消去

@@ -34,7 +34,7 @@ Ambil kembali kendali atas privasi Anda. Quick Clean menghapus data penjelajahan
 🌐 Bersihkan situs ini saja — Hapus cookie, data, dan riwayat situs saat ini tanpa menyentuh yang lain
 📊 Statistik lokal — Lihat berapa kali Anda membersihkan, berapa situs dan entri riwayat yang dibersihkan (hanya disimpan di perangkat Anda)
 🌗 Tema terang dan gelap — Ikuti sistem atau pilih sendiri
-🌍 14 bahasa — English, Français, Español, Português, Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. Antarmuka mengikuti bahasa browser Anda
+🌍 15 bahasa — English, Français, Español, Português (Brasil · Portugal), Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. Antarmuka mengikuti bahasa browser Anda
 🕐 Rentang waktu fleksibel — 1 jam, 24 jam, 7 hari, atau semuanya
 🛡️ Daftar putih — Lindungi cookie situs penting Anda (bank, email…)
 ⌨️ Pintasan keyboard — Bersihkan dengan Ctrl+Shift+E tanpa membuka popup

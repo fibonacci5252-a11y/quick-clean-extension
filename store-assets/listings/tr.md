@@ -34,7 +34,7 @@ Gizliliğinizin kontrolünü geri alın. Quick Clean, sekmenizden ayrılmadan ta
 🌐 Yalnızca bu siteyi temizle — Geçerli sitenin çerezlerini, verilerini ve geçmişini diğer her şeye dokunmadan silin
 📊 Yerel istatistikler — Kaç temizlik, site ve geçmiş kaydı temizlediğinizi görün (yalnızca cihazınızda saklanır)
 🌗 Açık ve koyu temalar — Sistemi izleyin veya kendiniz seçin
-🌍 14 dil — English, Français, Español, Português, Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. Arayüz tarayıcınızın diline uyar
+🌍 15 dil — English, Français, Español, Português (Brasil · Portugal), Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. Arayüz tarayıcınızın diline uyar
 🕐 Esnek zaman aralığı — 1 saat, 24 saat, 7 gün veya tümü
 🛡️ Beyaz liste — Önemli sitelerinizin (banka, e-posta…) çerezlerini koruyun
 ⌨️ Klavye kısayolu — Açılır pencereyi açmadan Ctrl+Shift+E ile temizleyin

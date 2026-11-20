@@ -34,7 +34,7 @@ Recupera el control de tu privacidad. Quick Clean borra tus datos de navegación
 🌐 Limpiar solo este sitio — Elimina cookies, datos e historial del sitio actual sin tocar nada más
 📊 Estadísticas locales — Consulta cuántas limpiezas, sitios y entradas del historial has limpiado (se guardan solo en tu dispositivo)
 🌗 Temas claro y oscuro — Sigue el sistema o elige el tuyo
-🌍 14 idiomas — English, Français, Español, Português, Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. La interfaz sigue el idioma de tu navegador
+🌍 15 idiomas — English, Français, Español, Português (Brasil · Portugal), Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. La interfaz sigue el idioma de tu navegador
 🕐 Rango de tiempo flexible — 1 hora, 24 horas, 7 días o todo el historial
 🛡️ Lista blanca — Protege las cookies de tus sitios importantes (banca, correo…)
 ⌨️ Atajo de teclado — Limpia con Ctrl+Shift+E sin abrir el popup

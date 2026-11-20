@@ -1,0 +1,254 @@
+{
+  "extName": {
+    "message": "Quick Clean"
+  },
+  "extDescription": {
+    "message": "Apague os seus dados de navegação com um clique: histórico, cookies, cache e mais."
+  },
+  "cmdClean": {
+    "message": "Limpar dados de navegação"
+  },
+  "settingsTitle": {
+    "message": "Definições"
+  },
+  "themeToggle": {
+    "message": "Mudar de tema"
+  },
+  "period": {
+    "message": "Período"
+  },
+  "range1h": {
+    "message": "1 hora"
+  },
+  "range24h": {
+    "message": "24 h"
+  },
+  "range7d": {
+    "message": "7 dias"
+  },
+  "rangeAll": {
+    "message": "Tudo"
+  },
+  "dataToClear": {
+    "message": "Dados a apagar"
+  },
+  "optHistory": {
+    "message": "Histórico"
+  },
+  "optCookies": {
+    "message": "Cookies"
+  },
+  "optCache": {
+    "message": "Cache"
+  },
+  "optDownloads": {
+    "message": "Transferências"
+  },
+  "optForms": {
+    "message": "Formulários"
+  },
+  "optPasswords": {
+    "message": "Palavras-passe"
+  },
+  "optLocalStorage": {
+    "message": "Armazenamento local"
+  },
+  "optCloseTabs": {
+    "message": "Fechar separadores"
+  },
+  "btnClean": {
+    "message": "Limpar agora"
+  },
+  "btnCleaning": {
+    "message": "A limpar…"
+  },
+  "shortcutLabel": {
+    "message": "Atalho:"
+  },
+  "thisSite": {
+    "message": "Este site"
+  },
+  "btnCleanSite": {
+    "message": "Limpar site"
+  },
+  "siteUnavailable": {
+    "message": "Abra um site para o limpar em separado."
+  },
+  "siteDone": {
+    "message": "$HOST$ limpo: cookies, dados do site e $HISTORY$ entradas do histórico",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      },
+      "history": {
+        "content": "$2"
+      }
+    }
+  },
+  "statusRemoved": {
+    "message": "Removido: $ITEMS$",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusNothing": {
+    "message": "Nada para limpar."
+  },
+  "statusError": {
+    "message": "Falha na limpeza."
+  },
+  "lastNow": {
+    "message": "Última limpeza: agora mesmo"
+  },
+  "lastMinutes": {
+    "message": "Última limpeza: há $N$ min",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastHours": {
+    "message": "Última limpeza: há $N$ h",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastDays": {
+    "message": "Última limpeza: há $N$ d",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "rHistory": {
+    "message": "histórico"
+  },
+  "rCache": {
+    "message": "cache"
+  },
+  "rDownloads": {
+    "message": "transferências"
+  },
+  "rForms": {
+    "message": "formulários"
+  },
+  "rPasswords": {
+    "message": "palavras-passe"
+  },
+  "rLocalStorage": {
+    "message": "armazenamento local"
+  },
+  "rCookies": {
+    "message": "cookies"
+  },
+  "rTabs": {
+    "message": "separadores"
+  },
+  "notifTitle": {
+    "message": "Quick Clean ✓"
+  },
+  "notifMessage": {
+    "message": "Limpo: $ITEMS$.",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statsCleanups": {
+    "message": "Limpezas"
+  },
+  "statsSites": {
+    "message": "Sites"
+  },
+  "statsHistory": {
+    "message": "Histórico"
+  },
+  "optionsTitle": {
+    "message": "Quick Clean — Definições"
+  },
+  "advancedSettings": {
+    "message": "Definições avançadas"
+  },
+  "whitelistTitle": {
+    "message": "Domínios protegidos (lista de permissões)"
+  },
+  "whitelistDesc": {
+    "message": "Estes sites mantêm os seus cookies e dados durante a limpeza."
+  },
+  "domainPlaceholder": {
+    "message": "exemplo.pt"
+  },
+  "btnAdd": {
+    "message": "Adicionar"
+  },
+  "emptyWhitelist": {
+    "message": "Sem domínios protegidos."
+  },
+  "remove": {
+    "message": "Remover"
+  },
+  "behaviorTitle": {
+    "message": "Comportamento"
+  },
+  "notifOptTitle": {
+    "message": "Notificações"
+  },
+  "notifOptDesc": {
+    "message": "Mostrar uma notificação após cada limpeza."
+  },
+  "startupTitle": {
+    "message": "Limpar ao iniciar"
+  },
+  "startupDesc": {
+    "message": "Limpar automaticamente quando o Chrome abre."
+  },
+  "appearanceTitle": {
+    "message": "Aspeto"
+  },
+  "themeLabel": {
+    "message": "Tema"
+  },
+  "themeAuto": {
+    "message": "Automático (sistema)"
+  },
+  "themeLight": {
+    "message": "Claro"
+  },
+  "themeDark": {
+    "message": "Escuro"
+  },
+  "statsTitle": {
+    "message": "Estatísticas"
+  },
+  "statsDesc": {
+    "message": "Totais desde que começou a usar o Quick Clean. Ficam guardados apenas neste dispositivo."
+  },
+  "statsReset": {
+    "message": "Repor estatísticas"
+  },
+  "shortcutTitle": {
+    "message": "Atalho de teclado"
+  },
+  "shortcutDefault": {
+    "message": "Atalho predefinido:"
+  },
+  "shortcutChange": {
+    "message": "Para o alterar, abra as definições de atalhos de extensões do Chrome."
+  },
+  "shortcutManage": {
+    "message": "Gerir atalhos de extensões"
+  },
+  "btnSave": {
+    "message": "Guardar"
+  },
+  "saved": {
+    "message": "Guardado"
+  }
+}

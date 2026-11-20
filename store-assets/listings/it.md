@@ -34,7 +34,7 @@ Riprendi il controllo della tua privacy. Quick Clean elimina i dati di navigazio
 🌐 Pulisci solo questo sito — Rimuovi cookie, dati e cronologia del sito corrente senza toccare altro
 📊 Statistiche locali — Scopri quante pulizie, siti e voci della cronologia hai eliminato (salvate solo sul tuo dispositivo)
 🌗 Temi chiaro e scuro — Segui il sistema o scegli il tuo
-🌍 14 lingue — English, Français, Español, Português, Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. L'interfaccia segue la lingua del tuo browser
+🌍 15 lingue — English, Français, Español, Português (Brasil · Portugal), Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. L'interfaccia segue la lingua del tuo browser
 🕐 Periodo flessibile — 1 ora, 24 ore, 7 giorni o tutto
 🛡️ Lista consentita — Proteggi i cookie dei siti importanti (banca, e-mail…)
 ⌨️ Scorciatoia da tastiera — Pulisci con Ctrl+Shift+E senza aprire il popup

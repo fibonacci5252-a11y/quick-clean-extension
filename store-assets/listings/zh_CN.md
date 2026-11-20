@@ -34,7 +34,7 @@ Quick Clean
 🌐 仅清理当前网站 — 只删除当前网站的 Cookie、数据和历史记录，不影响其他内容
 📊 本地统计 — 查看你清理了多少次、多少个网站和多少条历史记录（仅保存在你的设备上）
 🌗 浅色与深色主题 — 跟随系统或自行选择
-🌍 14 种语言 — English, Français, Español, Português, Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia。界面语言跟随浏览器
+🌍 15 种语言 — English, Français, Español, Português (Brasil · Portugal), Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia。界面语言跟随浏览器
 🕐 灵活的时间范围 — 1 小时、24 小时、7 天或全部
 🛡️ 白名单 — 保护重要网站（银行、邮箱等）的 Cookie
 ⌨️ 键盘快捷键 — 按 Ctrl+Shift+E 即可清理，无需打开弹窗

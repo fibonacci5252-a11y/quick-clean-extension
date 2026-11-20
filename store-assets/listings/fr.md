@@ -34,7 +34,7 @@ Reprenez le contrôle de votre vie privée. Quick Clean supprime instantanément
 🌐 Nettoyer ce site uniquement — Supprimez cookies, données du site et historique du site actuel sans toucher au reste
 📊 Statistiques locales — Consultez le nombre de nettoyages, de sites et d'entrées d'historique nettoyés (stockées uniquement sur votre appareil)
 🌗 Thèmes clair et sombre — Suivez votre système ou choisissez le vôtre
-🌍 14 langues — English, Français, Español, Português, Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. L'interface suit la langue de votre navigateur
+🌍 15 langues — English, Français, Español, Português (Brasil · Portugal), Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. L'interface suit la langue de votre navigateur
 🕐 Plage de temps flexible — 1 heure, 24 heures, 7 jours ou tout l'historique
 🛡️ Liste blanche — Protégez les cookies de vos sites importants (banque, e-mail…)
 ⌨️ Raccourci clavier — Nettoyez avec Ctrl+Shift+E sans ouvrir le popup

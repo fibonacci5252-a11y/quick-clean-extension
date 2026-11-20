@@ -1,0 +1,254 @@
+{
+  "extName": {
+    "message": "Quick Clean"
+  },
+  "extDescription": {
+    "message": "ワンクリックで閲覧データを削除：履歴、Cookie、キャッシュなど。"
+  },
+  "cmdClean": {
+    "message": "閲覧データを消去"
+  },
+  "settingsTitle": {
+    "message": "設定"
+  },
+  "themeToggle": {
+    "message": "テーマを切り替え"
+  },
+  "period": {
+    "message": "期間"
+  },
+  "range1h": {
+    "message": "1時間"
+  },
+  "range24h": {
+    "message": "24時間"
+  },
+  "range7d": {
+    "message": "7日間"
+  },
+  "rangeAll": {
+    "message": "すべて"
+  },
+  "dataToClear": {
+    "message": "削除するデータ"
+  },
+  "optHistory": {
+    "message": "履歴"
+  },
+  "optCookies": {
+    "message": "Cookie"
+  },
+  "optCache": {
+    "message": "キャッシュ"
+  },
+  "optDownloads": {
+    "message": "ダウンロード"
+  },
+  "optForms": {
+    "message": "フォーム"
+  },
+  "optPasswords": {
+    "message": "パスワード"
+  },
+  "optLocalStorage": {
+    "message": "ローカルストレージ"
+  },
+  "optCloseTabs": {
+    "message": "タブを閉じる"
+  },
+  "btnClean": {
+    "message": "今すぐ消去"
+  },
+  "btnCleaning": {
+    "message": "消去中…"
+  },
+  "shortcutLabel": {
+    "message": "ショートカット："
+  },
+  "thisSite": {
+    "message": "このサイト"
+  },
+  "btnCleanSite": {
+    "message": "サイトを消去"
+  },
+  "siteUnavailable": {
+    "message": "個別に消去するには、ウェブサイトを開いてください。"
+  },
+  "siteDone": {
+    "message": "$HOST$ を消去しました：Cookie、サイトデータ、履歴 $HISTORY$ 件",
+    "placeholders": {
+      "host": {
+        "content": "$1"
+      },
+      "history": {
+        "content": "$2"
+      }
+    }
+  },
+  "statusRemoved": {
+    "message": "削除済み：$ITEMS$",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusNothing": {
+    "message": "消去するものがありません。"
+  },
+  "statusError": {
+    "message": "消去に失敗しました。"
+  },
+  "lastNow": {
+    "message": "前回の消去：たった今"
+  },
+  "lastMinutes": {
+    "message": "前回の消去：$N$ 分前",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastHours": {
+    "message": "前回の消去：$N$ 時間前",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "lastDays": {
+    "message": "前回の消去：$N$ 日前",
+    "placeholders": {
+      "n": {
+        "content": "$1"
+      }
+    }
+  },
+  "rHistory": {
+    "message": "履歴"
+  },
+  "rCache": {
+    "message": "キャッシュ"
+  },
+  "rDownloads": {
+    "message": "ダウンロード"
+  },
+  "rForms": {
+    "message": "フォーム"
+  },
+  "rPasswords": {
+    "message": "パスワード"
+  },
+  "rLocalStorage": {
+    "message": "ローカルストレージ"
+  },
+  "rCookies": {
+    "message": "Cookie"
+  },
+  "rTabs": {
+    "message": "タブ"
+  },
+  "notifTitle": {
+    "message": "Quick Clean ✓"
+  },
+  "notifMessage": {
+    "message": "消去しました：$ITEMS$。",
+    "placeholders": {
+      "items": {
+        "content": "$1"
+      }
+    }
+  },
+  "statsCleanups": {
+    "message": "消去回数"
+  },
+  "statsSites": {
+    "message": "サイト"
+  },
+  "statsHistory": {
+    "message": "履歴"
+  },
+  "optionsTitle": {
+    "message": "Quick Clean — 設定"
+  },
+  "advancedSettings": {
+    "message": "詳細設定"
+  },
+  "whitelistTitle": {
+    "message": "保護するドメイン（許可リスト）"
+  },
+  "whitelistDesc": {
+    "message": "消去時も、これらのサイトの Cookie とデータは保持されます。"
+  },
+  "domainPlaceholder": {
+    "message": "example.com"
+  },
+  "btnAdd": {
+    "message": "追加"
+  },
+  "emptyWhitelist": {
+    "message": "保護するドメインはありません。"
+  },
+  "remove": {
+    "message": "削除"
+  },
+  "behaviorTitle": {
+    "message": "動作"
+  },
+  "notifOptTitle": {
+    "message": "通知"
+  },
+  "notifOptDesc": {
+    "message": "消去のたびに通知を表示します。"
+  },
+  "startupTitle": {
+    "message": "起動時に消去"
+  },
+  "startupDesc": {
+    "message": "Chrome の起動時に自動で消去します。"
+  },
+  "appearanceTitle": {
+    "message": "外観"
+  },
+  "themeLabel": {
+    "message": "テーマ"
+  },
+  "themeAuto": {
+    "message": "自動（システム）"
+  },
+  "themeLight": {
+    "message": "ライト"
+  },
+  "themeDark": {
+    "message": "ダーク"
+  },
+  "statsTitle": {
+    "message": "統計"
+  },
+  "statsDesc": {
+    "message": "Quick Clean の使用開始からの合計です。このデバイスにのみ保存されます。"
+  },
+  "statsReset": {
+    "message": "統計をリセット"
+  },
+  "shortcutTitle": {
+    "message": "キーボードショートカット"
+  },
+  "shortcutDefault": {
+    "message": "既定のショートカット："
+  },
+  "shortcutChange": {
+    "message": "変更するには、Chrome の拡張機能のショートカット設定を開いてください。"
+  },
+  "shortcutManage": {
+    "message": "拡張機能のショートカットを管理"
+  },
+  "btnSave": {
+    "message": "保存"
+  },
+  "saved": {
+    "message": "保存しました"
+  }
+}

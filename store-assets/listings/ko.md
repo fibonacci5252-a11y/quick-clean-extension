@@ -34,7 +34,7 @@ Quick Clean
 🌐 현재 사이트만 정리 — 다른 항목은 건드리지 않고 현재 사이트의 쿠키, 데이터, 방문 기록만 삭제
 📊 로컬 통계 — 정리한 횟수, 사이트 수, 방문 기록 수 확인(기기에만 저장)
 🌗 라이트 및 다크 테마 — 시스템에 맞추거나 직접 선택
-🌍 14개 언어 — English, Français, Español, Português, Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. 브라우저 언어에 따라 인터페이스가 표시됩니다
+🌍 14개 언어 — English, Français, Español, Português (Brasil · Portugal), Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. 브라우저 언어에 따라 인터페이스가 표시됩니다
 🕐 유연한 기간 설정 — 1시간, 24시간, 7일 또는 전체
 🛡️ 허용 목록 — 중요한 사이트(은행, 이메일 등)의 쿠키 보호
 ⌨️ 키보드 단축키 — 팝업을 열지 않고 Ctrl+Shift+E로 정리

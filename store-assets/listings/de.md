@@ -34,7 +34,7 @@ Hol dir die Kontrolle über deine Privatsphäre zurück. Quick Clean löscht dei
 🌐 Nur diese Seite bereinigen — Entferne Cookies, Websitedaten und Verlauf der aktuellen Website, ohne etwas anderes anzutasten
 📊 Lokale Statistik — Sieh, wie viele Bereinigungen, Seiten und Verlaufseinträge du bereinigt hast (nur auf deinem Gerät gespeichert)
 🌗 Helles und dunkles Design — Folge dem System oder wähle selbst
-🌍 14 Sprachen — English, Français, Español, Português, Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. Die Oberfläche folgt der Sprache deines Browsers
+🌍 15 Sprachen — English, Français, Español, Português (Brasil · Portugal), Deutsch, Italiano, Русский, Türkçe, العربية, हिन्दी, 中文, 日本語, 한국어, Bahasa Indonesia. Die Oberfläche folgt der Sprache deines Browsers
 🕐 Flexibler Zeitraum — 1 Stunde, 24 Stunden, 7 Tage oder alles
 🛡️ Whitelist — Schütze die Cookies deiner wichtigen Seiten (Bank, E-Mail …)
 ⌨️ Tastenkürzel — Bereinige mit Ctrl+Shift+E, ohne das Popup zu öffnen
