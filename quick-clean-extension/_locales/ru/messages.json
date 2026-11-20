@@ -250,5 +250,11 @@
   },
   "saved": {
     "message": "Сохранено"
+  },
+  "languageLabel": {
+    "message": "Язык"
+  },
+  "langAuto": {
+    "message": "Авто (язык браузера)"
   }
 }

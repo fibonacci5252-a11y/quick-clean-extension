@@ -3,7 +3,9 @@
 // Keyboard shortcut, startup cleanup and background cleaning
 // ============================================================
 
-const t = (key, subs) => chrome.i18n.getMessage(key, subs);
+importScripts("../shared/i18n-core.js");
+
+const t = (key, subs) => QCI18n.t(key, subs);
 
 const DEFAULT_SETTINGS = {
   clearHistory:      true,
@@ -17,7 +19,8 @@ const DEFAULT_SETTINGS = {
   closeTabs:         false,
   whitelist:         [],
   notifications:     true,
-  cleanOnStartup:    false
+  cleanOnStartup:    false,
+  language:          "auto"
 };
 
 const DEFAULT_STATS = { cleanups: 0, sites: 0, history: 0 };
@@ -78,6 +81,7 @@ async function closeAllTabs() {
 
 async function runCleanup(source = "manual") {
   const settings = await getSettings();
+  await QCI18n.load(settings.language);
   const since = getSinceTimestamp(settings.timeRange);
   const report = [];
   const counts = { history: 0 };

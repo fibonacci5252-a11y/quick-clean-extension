@@ -250,5 +250,11 @@
   },
   "saved": {
     "message": "تم الحفظ"
+  },
+  "languageLabel": {
+    "message": "اللغة"
+  },
+  "langAuto": {
+    "message": "تلقائي (لغة المتصفح)"
   }
 }

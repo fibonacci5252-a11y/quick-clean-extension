@@ -250,5 +250,11 @@
   },
   "saved": {
     "message": "Kaydedildi"
+  },
+  "languageLabel": {
+    "message": "Dil"
+  },
+  "langAuto": {
+    "message": "Otomatik (tarayıcı dili)"
   }
 }

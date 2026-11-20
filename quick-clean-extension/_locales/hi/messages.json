@@ -250,5 +250,11 @@
   },
   "saved": {
     "message": "सहेजा गया"
+  },
+  "languageLabel": {
+    "message": "भाषा"
+  },
+  "langAuto": {
+    "message": "स्वचालित (ब्राउज़र की भाषा)"
   }
 }

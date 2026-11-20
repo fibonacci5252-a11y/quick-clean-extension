@@ -250,5 +250,11 @@
   },
   "saved": {
     "message": "保存しました"
+  },
+  "languageLabel": {
+    "message": "言語"
+  },
+  "langAuto": {
+    "message": "自動（ブラウザの言語）"
   }
 }

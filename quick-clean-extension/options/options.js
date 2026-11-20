@@ -6,7 +6,8 @@ const DEFAULT_SETTINGS = {
   notifications:  true,
   cleanOnStartup: false,
   whitelist:      [],
-  theme:          "auto"
+  theme:          "auto",
+  language:       "auto"
 };
 
 const DEFAULT_STATS = { cleanups: 0, sites: 0, history: 0 };
@@ -21,6 +22,7 @@ const btnSave       = document.getElementById("btnSave");
 const saveFeedback  = document.getElementById("saveFeedback");
 const btnShortcut   = document.getElementById("btnShortcut");
 const themeSelect   = document.getElementById("themeSelect");
+const languageSelect = document.getElementById("languageSelect");
 const btnResetStats = document.getElementById("btnResetStats");
 
 function renderStats(stats) {
@@ -30,11 +32,28 @@ function renderStats(stats) {
   document.getElementById("statHistory").textContent  = s.history.toLocaleString();
 }
 
+function renderLanguageSelect(selected) {
+  languageSelect.innerHTML = "";
+  const auto = document.createElement("option");
+  auto.value = "auto";
+  auto.textContent = qcT("langAuto");
+  languageSelect.appendChild(auto);
+
+  QCI18n.SUPPORTED.forEach((code) => {
+    const option = document.createElement("option");
+    option.value = code;
+    option.textContent = QCI18n.NAMES[code];
+    languageSelect.appendChild(option);
+  });
+  languageSelect.value = selected;
+}
+
 function loadSettings() {
   chrome.storage.sync.get(DEFAULT_SETTINGS, (settings) => {
     document.getElementById("notifications").checked  = settings.notifications;
     document.getElementById("cleanOnStartup").checked = settings.cleanOnStartup;
     themeSelect.value = settings.theme;
+    renderLanguageSelect(settings.language);
     whitelist = Array.isArray(settings.whitelist) ? settings.whitelist : [];
     renderWhitelist();
   });
@@ -104,6 +123,14 @@ btnSave.addEventListener("click", saveSettings);
 
 themeSelect.addEventListener("change", () => QCTheme.set(themeSelect.value));
 
+languageSelect.addEventListener("change", async () => {
+  const choice = languageSelect.value;
+  chrome.storage.sync.set({ language: choice });
+  await qcSetLanguage(choice);
+  renderLanguageSelect(choice);
+  renderWhitelist();
+});
+
 btnResetStats.addEventListener("click", () => {
   chrome.storage.local.set({ stats: DEFAULT_STATS });
 });
@@ -116,4 +143,4 @@ chrome.storage.onChanged.addListener((changes, area) => {
   if (area === "local" && changes.stats) renderStats(changes.stats.newValue);
 });
 
-loadSettings();
+qcReady.then(loadSettings);

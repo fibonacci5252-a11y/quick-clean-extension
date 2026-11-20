@@ -250,5 +250,11 @@
   },
   "saved": {
     "message": "Tersimpan"
+  },
+  "languageLabel": {
+    "message": "Bahasa"
+  },
+  "langAuto": {
+    "message": "Otomatis (bahasa browser)"
   }
 }

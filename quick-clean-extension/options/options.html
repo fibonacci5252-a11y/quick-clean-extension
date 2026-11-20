@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="i18n-pending">
 <head>
   <meta charset="UTF-8" />
   <title data-i18n="optionsTitle">Quick Clean — Settings</title>
@@ -60,6 +60,12 @@
       <h2 data-i18n="appearanceTitle">Appearance</h2>
       <div class="option-row">
         <div class="option-text">
+          <strong data-i18n="languageLabel">Language</strong>
+        </div>
+        <select id="languageSelect" class="select"></select>
+      </div>
+      <div class="option-row">
+        <div class="option-text">
           <strong data-i18n="themeLabel">Theme</strong>
         </div>
         <select id="themeSelect" class="select">
@@ -101,6 +107,7 @@
     </div>
 
   </div>
+  <script src="../shared/i18n-core.js"></script>
   <script src="../shared/i18n.js"></script>
   <script src="options.js"></script>
 </body>

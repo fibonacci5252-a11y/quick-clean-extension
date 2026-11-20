@@ -250,5 +250,11 @@
   },
   "saved": {
     "message": "已保存"
+  },
+  "languageLabel": {
+    "message": "语言"
+  },
+  "langAuto": {
+    "message": "自动（浏览器语言）"
   }
 }

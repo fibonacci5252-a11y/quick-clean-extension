@@ -250,5 +250,11 @@
   },
   "saved": {
     "message": "저장됨"
+  },
+  "languageLabel": {
+    "message": "언어"
+  },
+  "langAuto": {
+    "message": "자동(브라우저 언어)"
   }
 }

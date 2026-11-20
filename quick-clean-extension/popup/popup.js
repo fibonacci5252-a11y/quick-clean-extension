@@ -181,5 +181,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
   if (area === "local" && changes.stats) renderStats(changes.stats.newValue);
 });
 
-loadSettings();
-initSite();
+qcReady.then(() => {
+  loadSettings();
+  initSite();
+});

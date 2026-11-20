@@ -8,6 +8,8 @@
 
 [hidden] { display: none !important; }
 
+html.i18n-pending body { visibility: hidden; }
+
 button, kbd { line-height: inherit; }
 
 :root {

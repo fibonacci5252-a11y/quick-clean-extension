@@ -6,6 +6,8 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+html.i18n-pending body { visibility: hidden; }
+
 :root {
   --bg:          #090909;
   --surface:     #111111;
